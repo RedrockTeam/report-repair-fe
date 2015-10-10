@@ -169,29 +169,40 @@ input {
 	background: url(img/home-bg.png) no-repeat;
 	background-size: 100% 100%;
 	text-align: center;
-	color: #fff;
+	color: #fff;									// home 的背景
 	.home-header-name {
 		display: inline-block;
+		margin: 0 auto;
 		margin-top: unit(70/@base-unit, rem);
 		font-size: 84px; /*px*/
 		line-height: 84px; /*px*/
-	}
-	.home-header-stuff {
-		margin-top: unit(20/@base-unit, rem);
-		margin-bottom: unit(50/@base-unit, rem);
-		font-size: 28px; /*px*/
-		line-height: 28px; /*px*/
-	}
+	}												// home 的人名
 	.home-header-submit {
+		position: relative;
+		display: block;
+		left: 50%;
+		margin-top: unit(60/@base-unit, rem);
+		margin-left: unit(-155/@base-unit, rem);
 		width: unit(310/@base-unit, rem);
 		height: unit(78/@base-unit, rem);
-		background: -webkit-gradient(linear, 0 0, 0 100%, from(#fedc82), to(#fea943));
+		line-height: unit(78/@base-unit, rem);
+		background: -webkit-gradient(linear, 0 0, 0 100%, from(#fec943), to(#fe9535));
 		//需要后面再搭建一个 gulp 用来自动补全前缀， autoprefixer 崩了
 		//右下角有一个图，记得补上去
 		border-radius: unit(10/@base-unit, rem);
 		border-style: none;
 		font-size: 32px; /*px*/
 	}
+	.home-submit-folder {
+		position: absolute;
+		width: unit(42/@base-unit, rem);
+		height: unit(24/@base-unit, rem);
+		right: 0;
+		bottom: 0;
+		background: url(img/home-submit-folder.png) no-repeat;
+		background-size: 100% 100%;
+	}
+	
 }
 .home-nav {
 	line-height: unit(80/@base-unit, rem);
@@ -214,6 +225,7 @@ input {
 	padding-left: unit(30/@base-unit, rem);
 	padding-right: unit(30/@base-unit, rem);
 	background-color: #fff;
+	border-bottom: 1px solid #a9a9a9; /*no*/
 	.home-itemList-single {
 		box-sizing: border-box;
 		overflow: hidden;
@@ -239,6 +251,31 @@ input {
 			color: #9a9a9a;
 		}
 	}
+
+}
+.home-itemList ul li:last-child {
+	border: none;
+}
+#home-nothing {
+	margin-top: unit(36/@base-unit, rem);
+	background-color: #fff;
+	.home-nothing-bg {
+		position: relative;
+		top: unit(70/@base-unit, rem);
+		margin-bottom: unit(140/@base-unit, rem);
+		width: unit(210/@base-unit, rem);
+		height: unit(210/@base-unit, rem);
+		left: 50%;
+		margin-left: unit(-105/@base-unit, rem);
+		background: url(img/home-nothing-bg.png) no-repeat;
+		background-size: 100% 100%;
+	}
+	.home-nothing-line {
+		padding-bottom: unit(200/@base-unit, rem);
+		text-align: center;
+		font-size: 32px;/*px*/
+		color: #d2d2d2;
+	}
 }
 /* home */
 
@@ -249,6 +286,19 @@ input {
 .detail-btn {
 	margin-top: unit(36/@base-unit, rem);
 	margin-bottom: unit(30/@base-unit, rem);
+}
+#detail-title-btn {
+	transition: transform .3s;
+}
+
+#detail-title-detail {
+	padding-top: 0;
+	padding-bottom: 0;
+	transition: padding-top .3s;
+	transition: padding-bottom .3s;
+	div {
+		margin-left: unit(65/@base-unit, rem);
+	}
 }
 /* detail */
 
@@ -276,8 +326,19 @@ input {
 /* submit-suc */
 
 /* fail */
+#fail-container {
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	background-color: rgba(0, 0, 0, .7);
+}
 #fail {
 	position: absolute;
+	left: 50%;
+	top: 50%;
+	margin-left: unit(-262.5/@base-unit, rem);
+	margin-top: unit(-250/@base-unit, rem);
 	width: unit(525/@base-unit, rem);
 	height: unit(500/@base-unit, rem);
 	background-color: #fff;
