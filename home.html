@@ -21,7 +21,7 @@
 		<input type="button" class="home-header-submit" value="报修提交">
 	</header>
 	<div class="home-nav">
-		<div id="home-nav-unfinish">
+		<div id="home-nav-unfinish" class="home-nav-focus">
 			未完成
 		</div>
 		<div id="home-nav-finish">
@@ -46,7 +46,16 @@
 			<li class="home-itemList-single">
 				<p>
 					<span class="hi-single-type">修电费</span>
-					<span class="hi-single-status">派出中</span>
+					<span class="hi-single-status">已完成</span>
+				</p>
+				<span class="hi-single-date">
+					2015-10-3
+				</span>
+			</li>
+			<li class="home-itemList-single">
+				<p>
+					<span class="hi-single-type">修电费</span>
+					<span class="hi-single-status">已完成</span>
 				</p>
 				<span class="hi-single-date">
 					2015-10-3
@@ -57,4 +66,26 @@
 </body>
 <script src="scripts/zepto.js"></script>
 <script src="scripts/flexible.js"></script>
+<script type="text/javascript">
+(function(){
+	var $btn_unfinish = $("#home-nav-unfinish"),
+		$btn_finish = $("#home-nav-finish"),
+		$unfinishItems = $("#home-unfinishItems"),
+		$finishItems = $("#home-finishItems");
+
+	$btn_unfinish.click(function() {
+		$btn_unfinish.addClass("home-nav-focus");
+		$btn_finish.removeClass("home-nav-focus");
+		$unfinishItems.css({display: "block"});
+		$finishItems.css({display: "none"});
+	});
+
+	$btn_finish.click(function() {
+		$btn_finish.addClass("home-nav-focus");
+		$btn_unfinish.removeClass("home-nav-focus");
+		$unfinishItems.css({display: "none"});
+		$finishItems.css({display: "block"});
+	});	
+}());	
+</script>
 </html>

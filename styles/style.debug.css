@@ -189,9 +189,10 @@ input {
   margin-top: 0.9375rem;
   margin-left: -2.421875rem;
   width: 4.84375rem;
-  height: 1.21875rem;
-  line-height: 1.21875rem;
-  background: -webkit-gradient(linear, 0 0, 0 100%, from(#fec943), to(#fe9535));
+  height: 1.25rem;
+  line-height: 1.25rem;
+  background: url(img/home-submit-bg.png) no-repeat;
+  background-size: 100% 100%;
   border-radius: 0.15625rem;
   border-style: none;
 }
@@ -216,12 +217,18 @@ input {
 #home-nav-unfinish {
   float: left;
   width: 50%;
-  border-bottom: 1px solid #157efb;
-  color: #157efb;
+  border-bottom: 1px solid #ccc;
 }
 
-#home-nav-finished {
-  border-bottom: 1px solid #a9a9a9;
+#home-nav-finish {
+  display: inline-block;
+  border-bottom: 1px solid #ccc;
+  width: 50%;
+}
+
+.home-nav-focus {
+  border-bottom: 1px solid #157efb!important;
+  color: #157efb;
 }
 
 .home-itemList {

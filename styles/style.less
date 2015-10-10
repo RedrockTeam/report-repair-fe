@@ -184,9 +184,10 @@ input {
 		margin-top: unit(60/@base-unit, rem);
 		margin-left: unit(-155/@base-unit, rem);
 		width: unit(310/@base-unit, rem);
-		height: unit(78/@base-unit, rem);
-		line-height: unit(78/@base-unit, rem);
-		background: -webkit-gradient(linear, 0 0, 0 100%, from(#fec943), to(#fe9535));
+		height: unit(80/@base-unit, rem);
+		line-height: unit(80/@base-unit, rem);
+		background: url(img/home-submit-bg.png) no-repeat;
+		background-size: 100% 100%;
 		//需要后面再搭建一个 gulp 用来自动补全前缀， autoprefixer 崩了
 		//右下角有一个图，记得补上去
 		border-radius: unit(10/@base-unit, rem);
@@ -214,11 +215,16 @@ input {
 #home-nav-unfinish {
 	float: left;
 	width: 50%;
-	border-bottom: 1px solid #157efb; /*no*/
-	color: #157efb;
+	border-bottom: 1px solid #ccc; /*no*/
 }
-#home-nav-finished {
-	border-bottom: 1px solid #a9a9a9; /*no*/
+#home-nav-finish {
+	display: inline-block;
+	border-bottom: 1px solid #ccc; /*no*/
+	width: 50%;
+}
+.home-nav-focus {
+	border-bottom: 1px solid #157efb!important; /*no*/
+	color: #157efb;
 }
 .home-itemList {			/* 已完成和未完成 list 共用一套样式 */
 	margin-top: unit(36/@base-unit, rem);
