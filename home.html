@@ -13,7 +13,7 @@
 <link rel="stylesheet" href="styles/normalize.min.css">	
 <link rel="stylesheet" href="styles/style.debug.css">	
 </head>
-<body>
+<body onload="loaded()">
 	<header id="home-header">
 		<span class="home-header-name">
 			姚蕤
@@ -28,37 +28,60 @@
 			已完成
 		</div>
 	</div>
+
 	<div id="home-unfinishItems" class="home-itemList">
-		<ul>
-			<li class="home-itemList-single">
-				<p>
-					<span class="hi-single-type">修电费</span>
-					<span class="hi-single-status">派出中</span>
-				</p>
-				<span class="hi-single-date">
-					2015-10-3
-				</span>
-			</li>
-			<li class="home-itemList-single">
-				<p>
-					<span class="hi-single-type">修电费</span>
-					<span class="hi-single-status">派出中</span>
-				</p>
-				<span class="hi-single-date">
-					2015-10-3
-				</span>
-			</li>
-			<li class="home-itemList-single">
-				<p>
-					<span class="hi-single-type">修电费</span>
-					<span class="hi-single-status">派出中</span>
-				</p>
-				<span class="hi-single-date">
-					2015-10-3
-				</span>
-			</li>
-		</ul>
+		<div id="scroller">
+			<ul>
+				<li class="home-itemList-single">
+					<p>
+						<span class="hi-single-type">修电费</span>
+						<span class="hi-single-status">派出中</span>
+					</p>
+					<span class="hi-single-date">
+						2015-10-3
+					</span>
+				</li>
+				<li class="home-itemList-single">
+					<p>
+						<span class="hi-single-type">修电费</span>
+						<span class="hi-single-status">派出中</span>
+					</p>
+					<span class="hi-single-date">
+						2015-10-3
+					</span>
+				</li>
+				<li class="home-itemList-single">
+					<p>
+						<span class="hi-single-type">修电费</span>
+						<span class="hi-single-status">派出中</span>
+					</p>
+					<span class="hi-single-date">
+						2015-10-3
+					</span>
+				</li>
+				<li class="home-itemList-single">
+					<p>
+						<span class="hi-single-type">修电费</span>
+						<span class="hi-single-status">派出中</span>
+					</p>
+					<span class="hi-single-date">
+						2015-10-3
+					</span>
+				</li>
+				<li class="home-itemList-single">
+					<p>
+						<span class="hi-single-type">修电费</span>
+						<span class="hi-single-status">派出中</span>
+					</p>
+					<span class="hi-single-date">
+						2015-10-3
+					</span>
+				</li>
+			</ul>
+			<span style="position: absolute; bottom: -30px;">777</span>
+		</div>
 	</div>
+	
 	<div id="home-finishItems" class="home-itemList" style="display: none">
 		<ul>
 			<li class="home-itemList-single">
@@ -85,4 +108,14 @@
 <script src="scripts/zepto.js"></script>
 <script src="scripts/flexible.js"></script>
 <script src="scripts/home.js"></script>
+<script src="scripts/iscroll.js"></script>
+<script type="text/javascript">
+var myScroll;
+
+function loaded () {
+	myScroll = new IScroll('#home-unfinishItems', { mouseWheel: true });
+}
+
+document.addEventListener('touchmove', function (e) { e.preventDefault(); }, false);
+</script>
 </html>
