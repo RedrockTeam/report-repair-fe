@@ -277,10 +277,6 @@ input {
 .home-itemList ul li:last-child {
   border: none;
 }
-.home-itemList ul {
-  border-bottom: 1px solid #a9a9a9;
-  /*no*/
-}
 #home-nothing {
   margin-top: 0.5625rem;
   background-color: #fff;

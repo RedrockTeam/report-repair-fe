@@ -10,9 +10,9 @@
 <head>
 	<meta charset="UTF-8">
 	<title>首页</title>	
-<link rel="stylesheet" href="/report-repair-fe/Public/styles/normalize.min.css">	
-<link rel="stylesheet" href="/report-repair-fe/Public/styles/style.debug.css">
-<link rel="stylesheet" href="/report-repair-fe/Public/styles/dropload.min.css">	
+<link rel="stylesheet" href="/repair-report/Public/styles/normalize.min.css">	
+<link rel="stylesheet" href="/repair-report/Public/styles/style.debug.css">
+<link rel="stylesheet" href="/repair-report/Public/styles/dropload.min.css">	
 </head>
 <body>
 	<header id="home-header">
@@ -30,18 +30,9 @@
 		</div>
 	</div>
 
-	<div id="home-unfinishItems" class="home-itemList home-inner-finish">
+	<div id="home-unfinishItems" class="home-itemList home-inner-unfinish">
 		<div class="lists">
 			<ul>
-				<li class="home-itemList-single">
-					<p>
-						<span class="hi-single-type">修电费</span>
-						<span class="hi-single-status">派出中</span>
-					</p>
-					<span class="hi-single-date">
-						2015-10-3
-					</span>
-				</li>
 				<li class="home-itemList-single">
 					<p>
 						<span class="hi-single-type">修电费</span>
@@ -82,18 +73,9 @@
 		</div>
 	</div>
 
-	<div id="home-finishItems" class="home-itemList home-inner-unfinish" style="display: none">
+	<div id="home-finishItems" class="home-itemList home-inner-finish" style="display: none">
 		<div class="lists">
 			<ul>
-				<li class="home-itemList-single">
-					<p>
-						<span class="hi-single-type">修电费</span>
-						<span class="hi-single-status">已完成</span>
-					</p>
-					<span class="hi-single-date">
-						2015-10-3
-					</span>
-				</li>
 				<li class="home-itemList-single">
 					<p>
 						<span class="hi-single-type">修电费</span>
@@ -142,7 +124,7 @@
 		</p>
 	</div>
 </body>
-<script src="/report-repair-fe/Public/scripts/zepto.js"></script>
-<script src="/report-repair-fe/Public/scripts/flexible.js"></script>
-<script src="/report-repair-fe/Public/scripts/dropload.min.js"></script>
-<script src="/report-repair-fe/Public/scripts/home.js"></script>
+<script src="/repair-report/Public/scripts/zepto.js"></script>
+<script src="/repair-report/Public/scripts/flexible.js"></script>
+<script src="/repair-report/Public/scripts/dropload.min.js"></script>
+<script src="/repair-report/Public/scripts/home.js"></script>

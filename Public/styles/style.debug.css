@@ -1,6 +1,6 @@
 /*
-  布局的时候使用的 rem 写
-  字体用的 px2rem 解决
+	布局的时候使用的 rem 写
+	字体用的 px2rem 解决
 */
 
 html {
@@ -271,10 +271,6 @@ input {
 
 .home-itemList ul li:last-child {
   border: none;
-}
-
-.home-itemList ul {
-  border-bottom: 1px solid #a9a9a9;
 }
 
 #home-nothing {
