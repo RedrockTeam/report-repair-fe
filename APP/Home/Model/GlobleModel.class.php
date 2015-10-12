@@ -30,15 +30,57 @@ class GlobleModel extends Model {
     }
     //刷新具体方法
 
-    public function get_5_contends($time){
-        $where = [
-            'stunum' => session('stuId'),
+    public function get_5_unfinshed_contends($time = 0){
+        $message = [];//结果数组
+        $status = [
+            0 => '未受理',
+            1 => '已审核',
+            2 => '已受理',
+            3 => '已派出',
         ];
-        if($message = M('globle')->where($where)->select()){
+        for($i = 0; $i < 4; $i++){
+            $where = [
+                'stunum' => session('stuId'),
+                'wx_wxztm' => $status[$i],
+            ];
+            $newres = M('globle')->where($where)->select();//对应状态的栏数
+            if($newres){
+                foreach ($newres as $key) {
+                    array_push($message, $key);
+                }
+            }
+        }
+        if($message){
             return array_slice($message, $time * 5, 5);
         }else{
             return false;
         }
-        
+    }
+
+    public function get_5_finshed_contends($time = 0){
+        $message = [];//结果数组
+        $status = [
+            0 => '已完工',
+            1 => '已验收',
+            2 => '已驳回',
+            3 => '已回访',
+        ];
+        for($i = 0; $i < 4; $i++){
+            $where = [
+                'stunum' => session('stuId'),
+                'wx_wxztm' => $status[$i],
+            ];
+            $newres = M('globle')->where($where)->select();//对应状态的栏数
+            if($newres){
+                foreach ($newres as $key) {
+                    array_push($message, $key);
+                }
+            }
+        }
+        if($message){
+            return array_slice($message, $time * 5, 5);
+        }else{
+            return false;
+        }
     }
 }

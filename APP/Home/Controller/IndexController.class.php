@@ -71,35 +71,37 @@ class IndexController extends Controller {
  		];
 		$res = send_request('InfoById', $conf);//获取从接口拿到的保修单数据
 		if($res){
-			if(count($res) <= 5){
-				D('Globle')->cacheRefresh($res);//每次查询的时候跟新本地缓存
-				$this->ajaxReturn($res, 'json');//返回json
-			}else if(count($res) != 27){
-				D('Globle')->cacheRefresh($res);
-				$top5 = array_slice($res, 1, 5);
-				$this->ajaxReturn($top5, 'json');
-			}else{
-				D('Globle')->cacheRefresh($res);//每次查询的时候跟新本地缓存
-				$this->ajaxReturn($res, 'json');//返回json
-			}
-		}else{                                     //查看是否为接口问题
-			$where = ['stunum' => session('stuId')];	
-			if($res = M('Globle')->where($where)->select()){   //本地有数据就调用本地的
-				$top5 = array_slice($res, 1, 5);
-				$this->ajaxReturn($res, 'json');                             
-			}else{
-				$this->ajaxReturn(false);//表示没有数据
-			}
+			D('Globle')->cacheRefresh($res);//每次查询的时候跟新本地缓存
+			$this->LoadUnfinishedData();
+		}else{                                     //查看是否为接口问题	
+			$this->LoadUnfinishedData();
 		}
     }
     //页面刷新的时候从远端获取返回顶部5条刷新缓存
 
- 	public function LoadData(){//主页面数据的抓取方法
-		$time = I('get.time');//下拉的次数
+ 	public function LoadUnfinishedData(){//主页面数据的抓取方法
+		if(I('get.time')){   //下拉的次数
+			$time = I('get.time');
+		}else{
+			$time = 0;
+		}
 		$conf = [
 			'id' => session('stuId'),
  		];
-		$res = D('Globle')->get_5_contends($time);
+		$res = D('Globle')->get_5_unfinshed_contends($time);
+		$this->ajaxReturn($res, 'json');
+ 	}
+
+ 	public function LoadFinishedData(){
+ 		if(I('get.time')){   //下拉的次数
+			$time = I('get.time');
+		}else{
+			$time = 0;
+		}
+		$conf = [
+			'id' => session('stuId'),
+ 		];
+		$res = D('Globle')->get_5_finshed_contends($time);
 		$this->ajaxReturn($res, 'json');
  	}
  	/*获取主页面信息以及下拉的处理的方法 

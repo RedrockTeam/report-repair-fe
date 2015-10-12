@@ -32,13 +32,48 @@
 		window.location.href = "submit.html";
 	});
 
-	$('.home-inner-finish').dropload({
+	$.ajax({				//首页加载
+            type: 'GET',
+            url: "index.php?m=Home&c=Index&a=firstLoad",
+            dataType: 'json',
+            success: function(data){
+            	var result = '';
+            	for(var i=0; i<5; i++){
+            		result += '<li class="home' + 
+            					'\-itemList' + 
+            					'\-single"><p><span class="hi' + 
+            					'\-single' + 
+            					'\-type">' + 
+            					'修电费' +
+            		 			'</span><span class="hi' +
+            		 			'\-single' + 
+            		 			'\-status">' + 
+            		 			'已完成' + 
+								'</span></p><span class="hi' + 
+								'\-single' + 
+								'\-date">' + 
+								'2015' +
+								'\-10' +
+								'\-5' +
+								'</span></li>'
+            	}
+                // 为了测试，延迟1秒加载
+                setTimeout(function(){
+                	$('.home-inner-unfinish .lists ul').append(result);
+                },500);
+            },
+            error: function(xhr, type){
+                alert('Ajax error!');
+            }
+        });
+
+	$('.home-inner-finish').dropload({ //已完成下拉
 	    scrollArea : window,
 	    loadDownFn : function(me){
 	        $.ajax({
 	            type: 'GET',
 	            //url: 'json/more.json',
-	            url: "index.php?m=Home&c=Index&a=firstLoad",
+	            url: "index.php?m=Home&c=Index&a=LoadFinishedData",
 	            dataType: 'json',
 	            success: function(data){
 	            	var result = '';
@@ -74,12 +109,12 @@
 	        });
 	    }
 	});
-	$('.home-inner-unfinish').dropload({
+	$('.home-inner-unfinish').dropload({  //未完成下拉
 	    scrollArea : window,
 	    loadDownFn : function(me){
 	        $.ajax({
 	            type: 'GET',
-	            url: "index.php?m=Home&c=Index&a=loadValue",
+	            url: "index.php?m=Home&c=Index&a=LoadUnfinishedData",
 	            dataType: 'json',
 	            success: function(data){
 	            	var result = '';
