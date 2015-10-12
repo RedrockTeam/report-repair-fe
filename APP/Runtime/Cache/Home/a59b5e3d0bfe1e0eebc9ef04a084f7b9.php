@@ -10,9 +10,9 @@
 <head>
 	<meta charset="UTF-8">
 	<title>首页</title>	
-<link rel="stylesheet" href="/report/Public/styles/normalize.min.css">	
-<link rel="stylesheet" href="/report/Public/styles/style.debug.css">
-<link rel="stylesheet" href="/report/Public/styles/dropload.min.css">	
+<link rel="stylesheet" href="/report-repair-fe/Public/styles/normalize.min.css">	
+<link rel="stylesheet" href="/report-repair-fe/Public/styles/style.debug.css">
+<link rel="stylesheet" href="/report-repair-fe/Public/styles/dropload.min.css">	
 </head>
 <body>
 	<header id="home-header">
@@ -142,7 +142,7 @@
 		</p>
 	</div>
 </body>
-<script src="/report/Public/scripts/zepto.js"></script>
-<script src="/report/Public/scripts/flexible.js"></script>
-<script src="/report/Public/scripts/dropload.min.js"></script>
-<script src="/report/Public/scripts/home.js"></script>
+<script src="/report-repair-fe/Public/scripts/zepto.js"></script>
+<script src="/report-repair-fe/Public/scripts/flexible.js"></script>
+<script src="/report-repair-fe/Public/scripts/dropload.min.js"></script>
+<script src="/report-repair-fe/Public/scripts/home.js"></script>

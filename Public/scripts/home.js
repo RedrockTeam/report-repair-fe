@@ -38,7 +38,7 @@
 	        $.ajax({
 	            type: 'GET',
 	            //url: 'json/more.json',
-	            url: "{:U('Index/firstLoad')}",
+	            url: "index.php?m=Home&c=Index&a=firstLoad",
 	            dataType: 'json',
 	            success: function(data){
 	            	var result = '';
@@ -79,7 +79,7 @@
 	    loadDownFn : function(me){
 	        $.ajax({
 	            type: 'GET',
-	            url: "{:U('Index/firstLoad')}",
+	            url: "index.php?m=Home&c=Index&a=loadValue",
 	            dataType: 'json',
 	            success: function(data){
 	            	var result = '';
