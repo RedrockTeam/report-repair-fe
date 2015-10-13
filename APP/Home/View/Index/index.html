@@ -33,42 +33,7 @@
 	<div id="home-unfinishItems" class="home-itemList home-inner-unfinish">
 		<div class="lists">
 			<ul>
-				<li class="home-itemList-single">
-					<p>
-						<span class="hi-single-type">修电费</span>
-						<span class="hi-single-status">派出中</span>
-					</p>
-					<span class="hi-single-date">
-						2015-10-3
-					</span>
-				</li>
-				<li class="home-itemList-single">
-					<p>
-						<span class="hi-single-type">修电费</span>
-						<span class="hi-single-status">派出中</span>
-					</p>
-					<span class="hi-single-date">
-						2015-10-3
-					</span>
-				</li>
-				<li class="home-itemList-single">
-					<p>
-						<span class="hi-single-type">修电费</span>
-						<span class="hi-single-status">派出中</span>
-					</p>
-					<span class="hi-single-date">
-						2015-10-3
-					</span>
-				</li>
-				<li class="home-itemList-single">
-					<p>
-						<span class="hi-single-type">修电费</span>
-						<span class="hi-single-status">派出中</span>
-					</p>
-					<span class="hi-single-date">
-						2015-10-3
-					</span>
-				</li>
+
 			</ul>
 		</div>
 	</div>
@@ -76,42 +41,7 @@
 	<div id="home-finishItems" class="home-itemList home-inner-finish" style="display: none">
 		<div class="lists">
 			<ul>
-				<li class="home-itemList-single">
-					<p>
-						<span class="hi-single-type">修电费</span>
-						<span class="hi-single-status">已完成</span>
-					</p>
-					<span class="hi-single-date">
-						2015-10-3
-					</span>
-				</li>
-				<li class="home-itemList-single">
-					<p>
-						<span class="hi-single-type">修电费</span>
-						<span class="hi-single-status">已完成</span>
-					</p>
-					<span class="hi-single-date">
-						2015-10-3
-					</span>
-				</li>
-				<li class="home-itemList-single">
-					<p>
-						<span class="hi-single-type">修电费</span>
-						<span class="hi-single-status">已完成</span>
-					</p>
-					<span class="hi-single-date">
-						2015-10-3
-					</span>
-				</li>
-				<li class="home-itemList-single">
-					<p>
-						<span class="hi-single-type">修电费</span>
-						<span class="hi-single-status">已完成</span>
-					</p>
-					<span class="hi-single-date">
-						2015-10-3
-					</span>
-				</li>
+				
 			</ul>
 		</div>
 	</div>

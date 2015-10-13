@@ -34,11 +34,17 @@
 		if(finishDrag === 0 && finishClick === 0) {
 			$.ajax({	//首页加载-已完成
 	            type: 'GET',
-	            url: "index.php?m=Home&c=Index&a=firstLoad", //地址对么？
+	            url: "index.php?m=Home&c=Index&a=LoadfinishedData", //地址对么？
 	            dataType: 'json',
 	            success: function(data){
+	            	console.log(data);
 	            	finishClick++;
-	            	data.length===0 ? $nothing.css({display: "block"}) : $finishItems.css({display: "block"});
+	            	if(data.length===0) {
+	            		$nothing.css({display: "block"});
+	            	}else {
+	            		$finishItems.css({display: "block"});
+	            		$nothing.css({display: "none"});
+	            	}
 	            	var result = '';
 	            	for(var i=0; i<data.length; i++){
 	            		result += '<li class="home' + 
@@ -56,7 +62,7 @@
 									'\-date">' + 
 									data[i].wx_bxsj.split(" ")[0].split("-")[0] + '\-' +
 									data[i].wx_bxsj.split(" ")[0].split("-")[1] + '\-' +
-									data[i].wx_bxsj.split(" ")[0].split("-")[1] + '\-' +
+									data[i].wx_bxsj.split(" ")[0].split("-")[1] + 
 									'</span></li>'
 	            	}
 	                $('.home-inner-finish .lists ul').append(result);
@@ -103,7 +109,7 @@
 									'\-date">' + 
 									data[i].wx_bxsj.split(" ")[0].split("-")[0] + '\-' +
 									data[i].wx_bxsj.split(" ")[0].split("-")[1] + '\-' +
-									data[i].wx_bxsj.split(" ")[0].split("-")[1] + '\-' +
+									data[i].wx_bxsj.split(" ")[0].split("-")[1] + 
 									'</span></li>'
 	            	}
 	                $('.home-inner-unfinish .lists ul').append(result);
@@ -119,16 +125,13 @@
 	$('.home-inner-unfinish').dropload({  //未完成-下拉
 	    scrollArea : window,
 	    loadDownFn : function(me){
-	    	//unfinishDrag ++;
+	    	unfinishDrag++;
+	    	console.log(unfinishDrag);
 	        $.ajax({
 	            type: 'GET',
-	            url: "index.php?m=Home&c=Index&a=LoadUnfinishedData&time=unfinishDrag",
+	            url: "index.php?m=Home&c=Index&a=LoadUnfinishedData",
 	            dataType: 'json',
 	            success: function(data){
-	            	// if(data.length !== 0) {
-	            		unfinishDrag++;
-	            		//console.log(unfinishDrag);
-	            	// }
 	            	var result = '';
 	            	for(var i=0; i<data.length; i++){
 	            		result += '<li class="home' + 
@@ -146,10 +149,9 @@
 									'\-date">' + 
 									data[i].wx_bxsj.split(" ")[0].split("-")[0] + '\-' +
 									data[i].wx_bxsj.split(" ")[0].split("-")[1] + '\-' +
-									data[i].wx_bxsj.split(" ")[0].split("-")[1] + '\-' +
+									data[i].wx_bxsj.split(" ")[0].split("-")[1] + 
 									'</span></li>'
 	            	}
-	                // 为了测试，延迟1秒加载
 	                setTimeout(function(){
 	                	$('.home-inner-unfinish .lists ul').append(result);
 	                    me.resetload();
@@ -166,18 +168,13 @@
 	$('.home-inner-finish').dropload({ //已完成-下拉
 	    scrollArea : window,
 	    loadDownFn : function(me){
-	    	// finishDrag++;
-	    	// console.log(finishDrag);
+	    	finishDrag++;
+	    	console.log(finishDrag);
 	        $.ajax({
 	            type: 'GET',
-	            url: "index.php?m=Home&c=Index&a=LoadFinishedData&time=finishDrag",		//这里获取不到数据？我换成 LoadunFinishedData 可以获取，应该是接口有问题
+	            url: "index.php?m=Home&c=Index&a=LoadFinishedData",		//这里获取不到数据？我换成 LoadunFinishedData 可以获取，应该是接口有问题
 	            dataType: 'json',
 	            success: function(data){
-	            	console.log(data);
-	            	// if(data.length !== 0) {
-	            	 	finishDrag++;
-	            	 	console.log(finishDrag);
-	            	// }
 	            	var result = '';
 	            	for(var i=0; i<data.length; i++){
 	            		result += '<li class="home' + 
@@ -195,10 +192,9 @@
 									'\-date">' + 
 									data[i].wx_bxsj.split(" ")[0].split("-")[0] + '\-' +
 									data[i].wx_bxsj.split(" ")[0].split("-")[1] + '\-' +
-									data[i].wx_bxsj.split(" ")[0].split("-")[1] + '\-' +
+									data[i].wx_bxsj.split(" ")[0].split("-")[1] +
 									'</span></li>'
 	            	}
-	                // 为了测试，延迟1秒加载
 	                setTimeout(function(){
 	                	$('.home-inner-finish .lists ul').append(result);
 	                    me.resetload();
