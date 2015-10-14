@@ -31,10 +31,10 @@
 			$nothing.css({display: "none"});
 			$finishItems.css({display: "block"});
 		}
-		if(finishDrag === 0 && finishClick === 0) {
-			$.ajax({	//首页加载-已完成
+		if(finishDrag === 0 && finishClick === 0) {		//第一次加载的条件，点击数为 0，拖动数为 0
+			$.ajax({
 	            type: 'GET',
-	            url: "index.php?m=Home&c=Index&a=LoadfinishedData", //地址对么？
+	            url: "index.php?m=Home&c=Index&a=LoadfinishedData", 
 	            dataType: 'json',
 	            success: function(data){
 	            	console.log(data);
@@ -47,25 +47,18 @@
 	            	}
 	            	var result = '';
 	            	for(var i=0; i<data.length; i++){
-	            		result += '<li class="home' + 
-	            					'\-itemList' + 
-	            					'\-single"><p><span class="hi' + 
-	            					'\-single' + 
-	            					'\-type">' + 
+	            		result += '<li class="home-itemList-single" dataid=' +
+	            					data[i].wx_wxdh +
+	            					'><p><span class="hi-single-type">' + 
 	            					data[i].wx_bxlxm +
-	            		 			'</span><span class="hi' +
-	            		 			'\-single' + 
-	            		 			'\-status">' + 
+	            		 			'</span><span class="hi-single-status">' + 
 	            		 			data[i].wx_wxztm + 
-									'</span></p><span class="hi' + 
-									'\-single' + 
-									'\-date">' + 
-									data[i].wx_bxsj.split(" ")[0].split("-")[0] + '\-' +
-									data[i].wx_bxsj.split(" ")[0].split("-")[1] + '\-' +
-									data[i].wx_bxsj.split(" ")[0].split("-")[1] + 
+									'</span></p><span class="hi-single-date">' + 
+									data[i].wx_bxsj.split(" ")[0] + 
 									'</span></li>'
 	            	}
 	                $('.home-inner-finish .lists ul').append(result);
+	                bindClick($('.home-itemList-single'));
 	            },
 	            error: function(xhr, type){
 	                alert('Ajax error!');
@@ -74,12 +67,6 @@
 		}
 	});	
 
-	$unfinishItems.click(function() {
-		window.location.href = "detail-undo.html";
-	});
-	$finishItems.click(function() {
-		window.location.href = "detail.html";
-	});
 	$toSubmit.click(function() {
 		window.location.href = "submit.html";
 	});
@@ -91,28 +78,22 @@
 	            url: "index.php?m=Home&c=Index&a=firstLoad",
 	            dataType: 'json',
 	            success: function(data){
+	            	console.log(data);
 	            	data.length===0 ? $nothing.css({display: "block"}) : $unfinishItems.css({display: "block"});
 	            	var result = '';
 	            	for(var i=0; i<data.length; i++){
-	            		result += '<li class="home' + 
-	            					'\-itemList' + 
-	            					'\-single"><p><span class="hi' + 
-	            					'\-single' + 
-	            					'\-type">' + 
+	            		result += '<li class="home-itemList-single" dataid=' +
+	            					data[i].wx_wxdh +
+	            					'><p><span class="hi-single-type">' + 
 	            					data[i].wx_bxlxm +
-	            		 			'</span><span class="hi' +
-	            		 			'\-single' + 
-	            		 			'\-status">' + 
+	            		 			'</span><span class="hi-single-status">' + 
 	            		 			data[i].wx_wxztm + 
-									'</span></p><span class="hi' + 
-									'\-single' + 
-									'\-date">' + 
-									data[i].wx_bxsj.split(" ")[0].split("-")[0] + '\-' +
-									data[i].wx_bxsj.split(" ")[0].split("-")[1] + '\-' +
-									data[i].wx_bxsj.split(" ")[0].split("-")[1] + 
+									'</span></p><span class="hi-single-date">' + 
+									data[i].wx_bxsj.split(" ")[0] + 
 									'</span></li>'
 	            	}
 	                $('.home-inner-unfinish .lists ul').append(result);
+	                bindClick($('.home-itemList-single'));
 	            },
 	            error: function(xhr, type){
 	                alert('Ajax error!');
@@ -134,26 +115,19 @@
 	            success: function(data){
 	            	var result = '';
 	            	for(var i=0; i<data.length; i++){
-	            		result += '<li class="home' + 
-	            					'\-itemList' + 
-	            					'\-single"><p><span class="hi' + 
-	            					'\-single' + 
-	            					'\-type">' + 
+	            		result += '<li class="home-itemList-single" dataid=' +
+	            					data[i].wx_wxdh +
+	            					'><p><span class="hi-single-type">' + 
 	            					data[i].wx_bxlxm +
-	            		 			'</span><span class="hi' +
-	            		 			'\-single' + 
-	            		 			'\-status">' + 
+	            		 			'</span><span class="hi-single-status">' + 
 	            		 			data[i].wx_wxztm + 
-									'</span></p><span class="hi' + 
-									'\-single' + 
-									'\-date">' + 
-									data[i].wx_bxsj.split(" ")[0].split("-")[0] + '\-' +
-									data[i].wx_bxsj.split(" ")[0].split("-")[1] + '\-' +
-									data[i].wx_bxsj.split(" ")[0].split("-")[1] + 
+									'</span></p><span class="hi-single-date">' + 
+									data[i].wx_bxsj.split(" ")[0] + 
 									'</span></li>'
 	            	}
 	                setTimeout(function(){
 	                	$('.home-inner-unfinish .lists ul').append(result);
+	                	bindClick($('.home-itemList-single'));
 	                    me.resetload();
 	                },500);
 	            },
@@ -172,31 +146,24 @@
 	    	console.log(finishDrag);
 	        $.ajax({
 	            type: 'GET',
-	            url: "index.php?m=Home&c=Index&a=LoadFinishedData",		//这里获取不到数据？我换成 LoadunFinishedData 可以获取，应该是接口有问题
+	            url: "index.php?m=Home&c=Index&a=LoadFinishedData",	
 	            dataType: 'json',
 	            success: function(data){
 	            	var result = '';
 	            	for(var i=0; i<data.length; i++){
-	            		result += '<li class="home' + 
-	            					'\-itemList' + 
-	            					'\-single"><p><span class="hi' + 
-	            					'\-single' + 
-	            					'\-type">' + 
+	            		result += '<li class="home-itemList-single" dataid=' +
+	            					data[i].wx_wxdh +
+	            					'><p><span class="hi-single-type">' + 
 	            					data[i].wx_bxlxm +
-	            		 			'</span><span class="hi' +
-	            		 			'\-single' + 
-	            		 			'\-status">' + 
+	            		 			'</span><span class="hi-single-status">' + 
 	            		 			data[i].wx_wxztm + 
-									'</span></p><span class="hi' + 
-									'\-single' + 
-									'\-date">' + 
-									data[i].wx_bxsj.split(" ")[0].split("-")[0] + '\-' +
-									data[i].wx_bxsj.split(" ")[0].split("-")[1] + '\-' +
-									data[i].wx_bxsj.split(" ")[0].split("-")[1] +
+									'</span></p><span class="hi-single-date">' + 
+									data[i].wx_bxsj.split(" ")[0] + 
 									'</span></li>'
 	            	}
 	                setTimeout(function(){
 	                	$('.home-inner-finish .lists ul').append(result);
+	                	bindClick($('.home-itemList-single'));
 	                    me.resetload();
 	                },500);
 	            },
@@ -208,4 +175,15 @@
 	    }
 	});
 
+
+	var sayDataId = function(element) {
+		element.addEventListener("click", function() {
+			console.log(element.getAttribute("dataId"));
+		}, false);
+	}
+	var bindClick = function(element) {
+		for(var i=0; i<element.length; i++) {
+			sayDataId(element[i]);
+		}
+	}
 }());

@@ -12,7 +12,7 @@
 	<title>首页</title>	
 <link rel="stylesheet" href="/repair-report/Public/styles/normalize.min.css">	
 <link rel="stylesheet" href="/repair-report/Public/styles/style.debug.css">
-<link rel="stylesheet" href="/repair-report/Public/styles/dropload.min.css">	
+<link rel="stylesheet" href="/repair-report/Public/styles/dropload.css">	
 </head>
 <body>
 	<header id="home-header">
@@ -56,5 +56,5 @@
 </body>
 <script src="/repair-report/Public/scripts/zepto.js"></script>
 <script src="/repair-report/Public/scripts/flexible.js"></script>
-<script src="/repair-report/Public/scripts/dropload.min.js"></script>
+<script src="/repair-report/Public/scripts/dropload.js"></script>
 <script src="/repair-report/Public/scripts/home.js"></script>
