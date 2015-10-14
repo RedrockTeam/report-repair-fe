@@ -12,7 +12,7 @@
 	<title>首页</title>	
 <link rel="stylesheet" href="/repair-report/Public/styles/normalize.min.css">	
 <link rel="stylesheet" href="/repair-report/Public/styles/style.debug.css">
-<link rel="stylesheet" href="/repair-report/Public/styles/dropload.css">	
+<link rel="stylesheet" href="/repair-report/Public/styles/dropload.min.css">	
 </head>
 <body>
 	<header id="home-header">
@@ -53,8 +53,11 @@
 			东西保管的很好哦
 		</p>
 	</div>
+	<div id="footer" style="width: 100%; height: 20px; background-color: #ccc; position: fixed; bottom:0">
+		
+	</div>
 </body>
 <script src="/repair-report/Public/scripts/zepto.js"></script>
 <script src="/repair-report/Public/scripts/flexible.js"></script>
-<script src="/repair-report/Public/scripts/dropload.js"></script>
+<script src="/repair-report/Public/scripts/dropload.min.js"></script>
 <script src="/repair-report/Public/scripts/home.js"></script>
