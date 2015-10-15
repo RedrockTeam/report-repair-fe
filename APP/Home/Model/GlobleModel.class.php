@@ -31,6 +31,7 @@ class GlobleModel extends Model {
     //刷新具体方法
 
     public function get_5_unfinshed_contends($time = 0){
+        $time = I('get.time');
         $message = [];//结果数组
         $status = [
             0 => '未受理',
@@ -51,7 +52,11 @@ class GlobleModel extends Model {
             }
         }
         if($message){
-            return array_slice($message, $time * 5, 5);
+            if($time < 1){
+                return array_slice($message, 0, 5);  //0-4
+            }else{
+                return array_slice($message, ($time - 1) * 4 + 5 , 4);
+            }
         }else{
             return false;
         }
@@ -78,7 +83,11 @@ class GlobleModel extends Model {
             }
         }
         if($message){
-            return array_slice($message, $time * 5, 5);
+            if($time < 1){
+                return array_slice($message, 0, 5);  //0-4
+            }else{
+                return array_slice($message, ($time - 1) * 4 + 5 , 4);
+            }
         }else{
             return false;
         }

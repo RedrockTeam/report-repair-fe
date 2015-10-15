@@ -34,7 +34,7 @@
 		if(finishDrag === 0 && finishClick === 0) {		//第一次加载的条件，点击数为 0，拖动数为 0
 			$.ajax({
 	            type: 'GET',
-	            url: "index.php?m=Home&c=Index&a=LoadfinishedData&time=finishDrag", 
+	            url: "index.php?m=Home&c=Index&a=LoadfinishedData&time="+finishDrag, 
 	            dataType: 'json',
 	            success: function(data){
 	            	finishClick++;
@@ -74,7 +74,7 @@
 	var pageLoad = function() {	//首页加载
 			$.ajax({		//首页加载-未完成		
 	            type: 'GET',
-	            url: "index.php?m=Home&c=Index&a=firstLoad&time=unfinishDrag",
+	            url: "index.php?m=Home&c=Index&a=firstLoad&time="+unfinishDrag,
 	            dataType: 'json',
 	            success: function(data){
 	            	data.length===0 ? $nothing.css({display: "block"}) : $unfinishItems.css({display: "block"});
@@ -107,7 +107,7 @@
 	    	unfinishDrag++;
 	        $.ajax({
 	            type: 'GET',
-	            url: "index.php?m=Home&c=Index&a=LoadUnfinishedData&time=unfinishDrag",
+	            url: "index.php?m=Home&c=Index&a=LoadUnfinishedData&time="+unfinishDrag,
 	            dataType: 'json',
 	            success: function(data){
 	            	var result = '';
@@ -142,7 +142,7 @@
 	    	finishDrag++;
 	        $.ajax({
 	            type: 'GET',
-	            url: "index.php?m=Home&c=Index&a=LoadFinishedData&time=finishDrag",	
+	            url: "index.php?m=Home&c=Index&a=LoadFinishedData&time="+finishDrag,	
 	            dataType: 'json',
 	            success: function(data){
 	            	var result = '';

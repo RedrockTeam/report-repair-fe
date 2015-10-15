@@ -170,3 +170,367 @@ SQL: SELECT * FROM `wx_globle` WHERE `stunum` = 2013214368 AND `wx_wxztm` = '已
 SQL: SELECT * FROM `wx_globle` WHERE `stunum` = 2013214368 AND `wx_wxztm` = '已受理'  [ RunTime:0.0010s ]
 SQL: SELECT * FROM `wx_globle` WHERE `stunum` = 2013214368 AND `wx_wxztm` = '已派出'  [ RunTime:0.0005s ]
 
+[ 2015-10-15T16:51:18+08:00 ] ::1 /report-repair-fe/
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000010s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000047s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000269s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000302s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000028s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000077s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.005549s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.005606s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000181s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000210s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000580s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000624s ]
+
+[ 2015-10-15T16:51:19+08:00 ] ::1 /report-repair-fe/index.php?m=Home&c=Index&a=firstLoad&time=unfinishDrag
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000018s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000093s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000526s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000665s ]
+NOTIC: [8] Undefined index: appId /Users/duzexuan/www/report-repair-fe/APP/Home/Common/function.php 第 6 行.
+NOTIC: [8] Undefined index: cateId /Users/duzexuan/www/report-repair-fe/APP/Home/Common/function.php 第 9 行.
+NOTIC: [8] Undefined index: rzm /Users/duzexuan/www/report-repair-fe/APP/Home/Common/function.php 第 12 行.
+NOTIC: [8] Undefined index: wxdjh /Users/duzexuan/www/report-repair-fe/APP/Home/Common/function.php 第 12 行.
+NOTIC: [8] Undefined index: hfmyd /Users/duzexuan/www/report-repair-fe/APP/Home/Common/function.php 第 12 行.
+NOTIC: [8] Undefined index: hfjy /Users/duzexuan/www/report-repair-fe/APP/Home/Common/function.php 第 12 行.
+NOTIC: [8] Undefined index: rzm /Users/duzexuan/www/report-repair-fe/APP/Home/Common/function.php 第 13 行.
+NOTIC: [8] Undefined index: xm /Users/duzexuan/www/report-repair-fe/APP/Home/Common/function.php 第 13 行.
+NOTIC: [8] Undefined index: ip /Users/duzexuan/www/report-repair-fe/APP/Home/Common/function.php 第 13 行.
+NOTIC: [8] Undefined index: bt /Users/duzexuan/www/report-repair-fe/APP/Home/Common/function.php 第 13 行.
+NOTIC: [8] Undefined index: fwxmh /Users/duzexuan/www/report-repair-fe/APP/Home/Common/function.php 第 13 行.
+NOTIC: [8] Undefined index: bxdh /Users/duzexuan/www/report-repair-fe/APP/Home/Common/function.php 第 13 行.
+NOTIC: [8] Undefined index: fwqyh /Users/duzexuan/www/report-repair-fe/APP/Home/Common/function.php 第 13 行.
+NOTIC: [8] Undefined index: bxdd /Users/duzexuan/www/report-repair-fe/APP/Home/Common/function.php 第 13 行.
+NOTIC: [8] Undefined index: bxnr /Users/duzexuan/www/report-repair-fe/APP/Home/Common/function.php 第 13 行.
+SQL: SHOW COLUMNS FROM `wx_globle` [ RunTime:0.0060s ]
+NOTIC: [2] Illegal string offset '#text' /Users/duzexuan/www/report-repair-fe/APP/Home/Model/GlobleModel.class.php 第 18 行.
+NOTIC: [8] Uninitialized string offset: 0 /Users/duzexuan/www/report-repair-fe/APP/Home/Model/GlobleModel.class.php 第 18 行.
+NOTIC: [2] Illegal string offset '#text' /Users/duzexuan/www/report-repair-fe/APP/Home/Model/GlobleModel.class.php 第 18 行.
+NOTIC: [8] Uninitialized string offset: 0 /Users/duzexuan/www/report-repair-fe/APP/Home/Model/GlobleModel.class.php 第 18 行.
+NOTIC: [2] Illegal string offset '#text' /Users/duzexuan/www/report-repair-fe/APP/Home/Model/GlobleModel.class.php 第 18 行.
+NOTIC: [8] Uninitialized string offset: 0 /Users/duzexuan/www/report-repair-fe/APP/Home/Model/GlobleModel.class.php 第 18 行.
+NOTIC: [2] Illegal string offset '#text' /Users/duzexuan/www/report-repair-fe/APP/Home/Model/GlobleModel.class.php 第 18 行.
+NOTIC: [8] Uninitialized string offset: 0 /Users/duzexuan/www/report-repair-fe/APP/Home/Model/GlobleModel.class.php 第 18 行.
+NOTIC: [2] Illegal string offset '#text' /Users/duzexuan/www/report-repair-fe/APP/Home/Model/GlobleModel.class.php 第 18 行.
+NOTIC: [8] Uninitialized string offset: 0 /Users/duzexuan/www/report-repair-fe/APP/Home/Model/GlobleModel.class.php 第 18 行.
+NOTIC: [2] Illegal string offset '#text' /Users/duzexuan/www/report-repair-fe/APP/Home/Model/GlobleModel.class.php 第 18 行.
+NOTIC: [8] Uninitialized string offset: 0 /Users/duzexuan/www/report-repair-fe/APP/Home/Model/GlobleModel.class.php 第 18 行.
+SQL: SHOW COLUMNS FROM `wx_globle` [ RunTime:0.0046s ]
+SQL: SELECT * FROM `wx_globle` WHERE `wx_djh` = 'a66222d0-f5ba-4fe5-86d4-a3cd01815db4'  [ RunTime:0.0005s ]
+NOTIC: [2] Illegal offset type in isset or empty /Users/duzexuan/www/report-repair-fe/ThinkPHP/Library/Think/Model.class.php 第 511 行.
+SQL: DELETE FROM `wx_globle` WHERE `wx_djh` = 'a66222d0-f5ba-4fe5-86d4-a3cd01815db4' [ RunTime:0.0014s ]
+SQL: INSERT INTO `wx_globle` (`wx_djh`,`wx_bt`,`wx_bxlxh`,`wx_bxlxm`,`wx_bxrrzm`,`wx_bxr`,`wx_bxsj`,`wx_bxdh`,`wx_fwqyh`,`wx_bxdd`,`wx_bxnr`,`wx_slr`,`wx_shr`,`wx_cxr`,`wx_ysfz`,`wx_ysqk`,`wx_hfr`,`wx_hfmyd`,`wx_hfjy`,`wx_fwqym`,`wx_wxztm`,`wx_wxgm`,`wx_cxbmm`,`xysj`,`wx_wxdh`,`wx_bxip`,`wx_sfkhf`,`stunum`) VALUES ('a66222d0-f5ba-4fe5-86d4-a3cd01815db4','停水','0102','水管','1635841                             ','刘晨凌','2014-10-23 23:41:18','10086','e51e1aae-8aa3-4546-aaab-a18d013873b0','123','<p>停水</p>','李开宇','李开宇','','0','','','','','学生公寓区','已受理','','物业管理中心','10-20分钟响应','Y2014102323-010380','202.202.43.205','否','2013214368') [ RunTime:0.0015s ]
+SQL: SELECT * FROM `wx_globle` WHERE `stunum` = 2013214368 AND `wx_wxztm` = '未受理'  [ RunTime:0.0005s ]
+SQL: SELECT * FROM `wx_globle` WHERE `stunum` = 2013214368 AND `wx_wxztm` = '已审核'  [ RunTime:0.0005s ]
+SQL: SELECT * FROM `wx_globle` WHERE `stunum` = 2013214368 AND `wx_wxztm` = '已受理'  [ RunTime:0.0005s ]
+SQL: SELECT * FROM `wx_globle` WHERE `stunum` = 2013214368 AND `wx_wxztm` = '已派出'  [ RunTime:0.0004s ]
+
+[ 2015-10-15T16:51:21+08:00 ] ::1 /report-repair-fe/index.php?m=Home&c=Index&a=LoadUnfinishedData&time=unfinishDrag
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000021s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000352s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.025569s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.025746s ]
+SQL: SHOW COLUMNS FROM `wx_globle` [ RunTime:0.0037s ]
+SQL: SHOW COLUMNS FROM `wx_globle` [ RunTime:0.0039s ]
+SQL: SELECT * FROM `wx_globle` WHERE `stunum` = 2013214368 AND `wx_wxztm` = '未受理'  [ RunTime:0.0007s ]
+SQL: SELECT * FROM `wx_globle` WHERE `stunum` = 2013214368 AND `wx_wxztm` = '已审核'  [ RunTime:0.0007s ]
+SQL: SELECT * FROM `wx_globle` WHERE `stunum` = 2013214368 AND `wx_wxztm` = '已受理'  [ RunTime:0.0009s ]
+SQL: SELECT * FROM `wx_globle` WHERE `stunum` = 2013214368 AND `wx_wxztm` = '已派出'  [ RunTime:0.0005s ]
+
+[ 2015-10-15T16:52:19+08:00 ] ::1 /report-repair-fe/
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000007s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000037s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000347s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000384s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000030s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000082s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.004793s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.004883s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000162s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000194s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000314s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000344s ]
+
+[ 2015-10-15T16:53:00+08:00 ] ::1 /report-repair-fe/
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000013s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000071s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000326s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000381s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000025s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000064s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.010541s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.010609s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000109s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000133s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000334s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000481s ]
+
+[ 2015-10-15T16:53:01+08:00 ] ::1 /report-repair-fe/index.php?m=Home&c=Index&a=firstLoad&time=0
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000014s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000075s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000480s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000545s ]
+NOTIC: [8] Undefined index: appId /Users/duzexuan/www/report-repair-fe/APP/Home/Common/function.php 第 6 行.
+NOTIC: [8] Undefined index: cateId /Users/duzexuan/www/report-repair-fe/APP/Home/Common/function.php 第 9 行.
+NOTIC: [8] Undefined index: rzm /Users/duzexuan/www/report-repair-fe/APP/Home/Common/function.php 第 12 行.
+NOTIC: [8] Undefined index: wxdjh /Users/duzexuan/www/report-repair-fe/APP/Home/Common/function.php 第 12 行.
+NOTIC: [8] Undefined index: hfmyd /Users/duzexuan/www/report-repair-fe/APP/Home/Common/function.php 第 12 行.
+NOTIC: [8] Undefined index: hfjy /Users/duzexuan/www/report-repair-fe/APP/Home/Common/function.php 第 12 行.
+NOTIC: [8] Undefined index: rzm /Users/duzexuan/www/report-repair-fe/APP/Home/Common/function.php 第 13 行.
+NOTIC: [8] Undefined index: xm /Users/duzexuan/www/report-repair-fe/APP/Home/Common/function.php 第 13 行.
+NOTIC: [8] Undefined index: ip /Users/duzexuan/www/report-repair-fe/APP/Home/Common/function.php 第 13 行.
+NOTIC: [8] Undefined index: bt /Users/duzexuan/www/report-repair-fe/APP/Home/Common/function.php 第 13 行.
+NOTIC: [8] Undefined index: fwxmh /Users/duzexuan/www/report-repair-fe/APP/Home/Common/function.php 第 13 行.
+NOTIC: [8] Undefined index: bxdh /Users/duzexuan/www/report-repair-fe/APP/Home/Common/function.php 第 13 行.
+NOTIC: [8] Undefined index: fwqyh /Users/duzexuan/www/report-repair-fe/APP/Home/Common/function.php 第 13 行.
+NOTIC: [8] Undefined index: bxdd /Users/duzexuan/www/report-repair-fe/APP/Home/Common/function.php 第 13 行.
+NOTIC: [8] Undefined index: bxnr /Users/duzexuan/www/report-repair-fe/APP/Home/Common/function.php 第 13 行.
+SQL: SHOW COLUMNS FROM `wx_globle` [ RunTime:0.0036s ]
+NOTIC: [2] Illegal string offset '#text' /Users/duzexuan/www/report-repair-fe/APP/Home/Model/GlobleModel.class.php 第 18 行.
+NOTIC: [8] Uninitialized string offset: 0 /Users/duzexuan/www/report-repair-fe/APP/Home/Model/GlobleModel.class.php 第 18 行.
+NOTIC: [2] Illegal string offset '#text' /Users/duzexuan/www/report-repair-fe/APP/Home/Model/GlobleModel.class.php 第 18 行.
+NOTIC: [8] Uninitialized string offset: 0 /Users/duzexuan/www/report-repair-fe/APP/Home/Model/GlobleModel.class.php 第 18 行.
+NOTIC: [2] Illegal string offset '#text' /Users/duzexuan/www/report-repair-fe/APP/Home/Model/GlobleModel.class.php 第 18 行.
+NOTIC: [8] Uninitialized string offset: 0 /Users/duzexuan/www/report-repair-fe/APP/Home/Model/GlobleModel.class.php 第 18 行.
+NOTIC: [2] Illegal string offset '#text' /Users/duzexuan/www/report-repair-fe/APP/Home/Model/GlobleModel.class.php 第 18 行.
+NOTIC: [8] Uninitialized string offset: 0 /Users/duzexuan/www/report-repair-fe/APP/Home/Model/GlobleModel.class.php 第 18 行.
+NOTIC: [2] Illegal string offset '#text' /Users/duzexuan/www/report-repair-fe/APP/Home/Model/GlobleModel.class.php 第 18 行.
+NOTIC: [8] Uninitialized string offset: 0 /Users/duzexuan/www/report-repair-fe/APP/Home/Model/GlobleModel.class.php 第 18 行.
+NOTIC: [2] Illegal string offset '#text' /Users/duzexuan/www/report-repair-fe/APP/Home/Model/GlobleModel.class.php 第 18 行.
+NOTIC: [8] Uninitialized string offset: 0 /Users/duzexuan/www/report-repair-fe/APP/Home/Model/GlobleModel.class.php 第 18 行.
+SQL: SHOW COLUMNS FROM `wx_globle` [ RunTime:0.0039s ]
+SQL: SELECT * FROM `wx_globle` WHERE `wx_djh` = 'a66222d0-f5ba-4fe5-86d4-a3cd01815db4'  [ RunTime:0.0006s ]
+NOTIC: [2] Illegal offset type in isset or empty /Users/duzexuan/www/report-repair-fe/ThinkPHP/Library/Think/Model.class.php 第 511 行.
+SQL: DELETE FROM `wx_globle` WHERE `wx_djh` = 'a66222d0-f5ba-4fe5-86d4-a3cd01815db4' [ RunTime:0.0026s ]
+SQL: INSERT INTO `wx_globle` (`wx_djh`,`wx_bt`,`wx_bxlxh`,`wx_bxlxm`,`wx_bxrrzm`,`wx_bxr`,`wx_bxsj`,`wx_bxdh`,`wx_fwqyh`,`wx_bxdd`,`wx_bxnr`,`wx_slr`,`wx_shr`,`wx_cxr`,`wx_ysfz`,`wx_ysqk`,`wx_hfr`,`wx_hfmyd`,`wx_hfjy`,`wx_fwqym`,`wx_wxztm`,`wx_wxgm`,`wx_cxbmm`,`xysj`,`wx_wxdh`,`wx_bxip`,`wx_sfkhf`,`stunum`) VALUES ('a66222d0-f5ba-4fe5-86d4-a3cd01815db4','停水','0102','水管','1635841                             ','刘晨凌','2014-10-23 23:41:18','10086','e51e1aae-8aa3-4546-aaab-a18d013873b0','123','<p>停水</p>','李开宇','李开宇','','0','','','','','学生公寓区','已受理','','物业管理中心','10-20分钟响应','Y2014102323-010380','202.202.43.205','否','2013214368') [ RunTime:0.0011s ]
+SQL: SELECT * FROM `wx_globle` WHERE `stunum` = 2013214368 AND `wx_wxztm` = '未受理'  [ RunTime:0.0005s ]
+SQL: SELECT * FROM `wx_globle` WHERE `stunum` = 2013214368 AND `wx_wxztm` = '已审核'  [ RunTime:0.0006s ]
+SQL: SELECT * FROM `wx_globle` WHERE `stunum` = 2013214368 AND `wx_wxztm` = '已受理'  [ RunTime:0.0006s ]
+SQL: SELECT * FROM `wx_globle` WHERE `stunum` = 2013214368 AND `wx_wxztm` = '已派出'  [ RunTime:0.0004s ]
+
+[ 2015-10-15T16:53:03+08:00 ] ::1 /report-repair-fe/index.php?m=Home&c=Index&a=LoadUnfinishedData&time=1
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000008s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000042s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001017s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001090s ]
+SQL: SHOW COLUMNS FROM `wx_globle` [ RunTime:0.0052s ]
+SQL: SHOW COLUMNS FROM `wx_globle` [ RunTime:0.0090s ]
+SQL: SELECT * FROM `wx_globle` WHERE `stunum` = 2013214368 AND `wx_wxztm` = '未受理'  [ RunTime:0.0069s ]
+SQL: SELECT * FROM `wx_globle` WHERE `stunum` = 2013214368 AND `wx_wxztm` = '已审核'  [ RunTime:0.0025s ]
+SQL: SELECT * FROM `wx_globle` WHERE `stunum` = 2013214368 AND `wx_wxztm` = '已受理'  [ RunTime:0.0030s ]
+SQL: SELECT * FROM `wx_globle` WHERE `stunum` = 2013214368 AND `wx_wxztm` = '已派出'  [ RunTime:0.0036s ]
+
+[ 2015-10-15T16:53:05+08:00 ] ::1 /report-repair-fe/index.php?m=Home&c=Index&a=LoadfinishedData&time=0
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000014s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000071s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000426s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000478s ]
+SQL: SHOW COLUMNS FROM `wx_globle` [ RunTime:0.0057s ]
+SQL: SHOW COLUMNS FROM `wx_globle` [ RunTime:0.0046s ]
+SQL: SELECT * FROM `wx_globle` WHERE `stunum` = 2013214368 AND `wx_wxztm` = '已完工'  [ RunTime:0.0004s ]
+SQL: SELECT * FROM `wx_globle` WHERE `stunum` = 2013214368 AND `wx_wxztm` = '已验收'  [ RunTime:0.0003s ]
+SQL: SELECT * FROM `wx_globle` WHERE `stunum` = 2013214368 AND `wx_wxztm` = '已驳回'  [ RunTime:0.0004s ]
+SQL: SELECT * FROM `wx_globle` WHERE `stunum` = 2013214368 AND `wx_wxztm` = '已回访'  [ RunTime:0.0005s ]
+
+[ 2015-10-15T16:53:07+08:00 ] ::1 /report-repair-fe/index.php?m=Home&c=Index&a=LoadFinishedData&time=1
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000013s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000067s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000557s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000633s ]
+SQL: SHOW COLUMNS FROM `wx_globle` [ RunTime:0.0041s ]
+SQL: SHOW COLUMNS FROM `wx_globle` [ RunTime:0.0042s ]
+SQL: SELECT * FROM `wx_globle` WHERE `stunum` = 2013214368 AND `wx_wxztm` = '已完工'  [ RunTime:0.0015s ]
+SQL: SELECT * FROM `wx_globle` WHERE `stunum` = 2013214368 AND `wx_wxztm` = '已验收'  [ RunTime:0.0053s ]
+SQL: SELECT * FROM `wx_globle` WHERE `stunum` = 2013214368 AND `wx_wxztm` = '已驳回'  [ RunTime:0.0061s ]
+SQL: SELECT * FROM `wx_globle` WHERE `stunum` = 2013214368 AND `wx_wxztm` = '已回访'  [ RunTime:0.0070s ]
+
+[ 2015-10-15T16:55:08+08:00 ] ::1 /report-repair-fe/
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000007s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000038s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000232s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000264s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000028s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000106s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.004694s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.004918s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000378s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000436s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000646s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000700s ]
+
+[ 2015-10-15T16:55:09+08:00 ] ::1 /report-repair-fe/index.php?m=Home&c=Index&a=firstLoad&time=0
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000016s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000092s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000569s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000639s ]
+NOTIC: [8] Undefined index: appId /Users/duzexuan/www/report-repair-fe/APP/Home/Common/function.php 第 6 行.
+NOTIC: [8] Undefined index: cateId /Users/duzexuan/www/report-repair-fe/APP/Home/Common/function.php 第 9 行.
+NOTIC: [8] Undefined index: rzm /Users/duzexuan/www/report-repair-fe/APP/Home/Common/function.php 第 12 行.
+NOTIC: [8] Undefined index: wxdjh /Users/duzexuan/www/report-repair-fe/APP/Home/Common/function.php 第 12 行.
+NOTIC: [8] Undefined index: hfmyd /Users/duzexuan/www/report-repair-fe/APP/Home/Common/function.php 第 12 行.
+NOTIC: [8] Undefined index: hfjy /Users/duzexuan/www/report-repair-fe/APP/Home/Common/function.php 第 12 行.
+NOTIC: [8] Undefined index: rzm /Users/duzexuan/www/report-repair-fe/APP/Home/Common/function.php 第 13 行.
+NOTIC: [8] Undefined index: xm /Users/duzexuan/www/report-repair-fe/APP/Home/Common/function.php 第 13 行.
+NOTIC: [8] Undefined index: ip /Users/duzexuan/www/report-repair-fe/APP/Home/Common/function.php 第 13 行.
+NOTIC: [8] Undefined index: bt /Users/duzexuan/www/report-repair-fe/APP/Home/Common/function.php 第 13 行.
+NOTIC: [8] Undefined index: fwxmh /Users/duzexuan/www/report-repair-fe/APP/Home/Common/function.php 第 13 行.
+NOTIC: [8] Undefined index: bxdh /Users/duzexuan/www/report-repair-fe/APP/Home/Common/function.php 第 13 行.
+NOTIC: [8] Undefined index: fwqyh /Users/duzexuan/www/report-repair-fe/APP/Home/Common/function.php 第 13 行.
+NOTIC: [8] Undefined index: bxdd /Users/duzexuan/www/report-repair-fe/APP/Home/Common/function.php 第 13 行.
+NOTIC: [8] Undefined index: bxnr /Users/duzexuan/www/report-repair-fe/APP/Home/Common/function.php 第 13 行.
+SQL: SHOW COLUMNS FROM `wx_globle` [ RunTime:0.0040s ]
+NOTIC: [2] Illegal string offset '#text' /Users/duzexuan/www/report-repair-fe/APP/Home/Model/GlobleModel.class.php 第 18 行.
+NOTIC: [8] Uninitialized string offset: 0 /Users/duzexuan/www/report-repair-fe/APP/Home/Model/GlobleModel.class.php 第 18 行.
+NOTIC: [2] Illegal string offset '#text' /Users/duzexuan/www/report-repair-fe/APP/Home/Model/GlobleModel.class.php 第 18 行.
+NOTIC: [8] Uninitialized string offset: 0 /Users/duzexuan/www/report-repair-fe/APP/Home/Model/GlobleModel.class.php 第 18 行.
+NOTIC: [2] Illegal string offset '#text' /Users/duzexuan/www/report-repair-fe/APP/Home/Model/GlobleModel.class.php 第 18 行.
+NOTIC: [8] Uninitialized string offset: 0 /Users/duzexuan/www/report-repair-fe/APP/Home/Model/GlobleModel.class.php 第 18 行.
+NOTIC: [2] Illegal string offset '#text' /Users/duzexuan/www/report-repair-fe/APP/Home/Model/GlobleModel.class.php 第 18 行.
+NOTIC: [8] Uninitialized string offset: 0 /Users/duzexuan/www/report-repair-fe/APP/Home/Model/GlobleModel.class.php 第 18 行.
+NOTIC: [2] Illegal string offset '#text' /Users/duzexuan/www/report-repair-fe/APP/Home/Model/GlobleModel.class.php 第 18 行.
+NOTIC: [8] Uninitialized string offset: 0 /Users/duzexuan/www/report-repair-fe/APP/Home/Model/GlobleModel.class.php 第 18 行.
+NOTIC: [2] Illegal string offset '#text' /Users/duzexuan/www/report-repair-fe/APP/Home/Model/GlobleModel.class.php 第 18 行.
+NOTIC: [8] Uninitialized string offset: 0 /Users/duzexuan/www/report-repair-fe/APP/Home/Model/GlobleModel.class.php 第 18 行.
+SQL: SHOW COLUMNS FROM `wx_globle` [ RunTime:0.0059s ]
+SQL: SELECT * FROM `wx_globle` WHERE `wx_djh` = 'a66222d0-f5ba-4fe5-86d4-a3cd01815db4'  [ RunTime:0.0006s ]
+NOTIC: [2] Illegal offset type in isset or empty /Users/duzexuan/www/report-repair-fe/ThinkPHP/Library/Think/Model.class.php 第 511 行.
+SQL: DELETE FROM `wx_globle` WHERE `wx_djh` = 'a66222d0-f5ba-4fe5-86d4-a3cd01815db4' [ RunTime:0.0013s ]
+SQL: INSERT INTO `wx_globle` (`wx_djh`,`wx_bt`,`wx_bxlxh`,`wx_bxlxm`,`wx_bxrrzm`,`wx_bxr`,`wx_bxsj`,`wx_bxdh`,`wx_fwqyh`,`wx_bxdd`,`wx_bxnr`,`wx_slr`,`wx_shr`,`wx_cxr`,`wx_ysfz`,`wx_ysqk`,`wx_hfr`,`wx_hfmyd`,`wx_hfjy`,`wx_fwqym`,`wx_wxztm`,`wx_wxgm`,`wx_cxbmm`,`xysj`,`wx_wxdh`,`wx_bxip`,`wx_sfkhf`,`stunum`) VALUES ('a66222d0-f5ba-4fe5-86d4-a3cd01815db4','停水','0102','水管','1635841                             ','刘晨凌','2014-10-23 23:41:18','10086','e51e1aae-8aa3-4546-aaab-a18d013873b0','123','<p>停水</p>','李开宇','李开宇','','0','','','','','学生公寓区','已受理','','物业管理中心','10-20分钟响应','Y2014102323-010380','202.202.43.205','否','2013214368') [ RunTime:0.0036s ]
+SQL: SELECT * FROM `wx_globle` WHERE `stunum` = 2013214368 AND `wx_wxztm` = '未受理'  [ RunTime:0.0008s ]
+SQL: SELECT * FROM `wx_globle` WHERE `stunum` = 2013214368 AND `wx_wxztm` = '已审核'  [ RunTime:0.0005s ]
+SQL: SELECT * FROM `wx_globle` WHERE `stunum` = 2013214368 AND `wx_wxztm` = '已受理'  [ RunTime:0.0005s ]
+SQL: SELECT * FROM `wx_globle` WHERE `stunum` = 2013214368 AND `wx_wxztm` = '已派出'  [ RunTime:0.0004s ]
+
+[ 2015-10-15T16:55:11+08:00 ] ::1 /report-repair-fe/index.php?m=Home&c=Index&a=LoadUnfinishedData&time=1
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000030s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000220s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000812s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000887s ]
+SQL: SHOW COLUMNS FROM `wx_globle` [ RunTime:0.0061s ]
+SQL: SHOW COLUMNS FROM `wx_globle` [ RunTime:0.0097s ]
+SQL: SELECT * FROM `wx_globle` WHERE `stunum` = 2013214368 AND `wx_wxztm` = '未受理'  [ RunTime:0.0068s ]
+SQL: SELECT * FROM `wx_globle` WHERE `stunum` = 2013214368 AND `wx_wxztm` = '已审核'  [ RunTime:0.0054s ]
+SQL: SELECT * FROM `wx_globle` WHERE `stunum` = 2013214368 AND `wx_wxztm` = '已受理'  [ RunTime:0.0054s ]
+SQL: SELECT * FROM `wx_globle` WHERE `stunum` = 2013214368 AND `wx_wxztm` = '已派出'  [ RunTime:0.0037s ]
+
+[ 2015-10-15T16:56:52+08:00 ] ::1 /report-repair-fe/
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000015s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000144s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001382s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001544s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000043s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000090s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.003739s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.003775s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000091s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000112s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000246s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000278s ]
+
+[ 2015-10-15T16:56:53+08:00 ] ::1 /report-repair-fe/index.php?m=Home&c=Index&a=firstLoad&time=0
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000012s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000056s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000382s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000436s ]
+NOTIC: [8] Undefined index: appId /Users/duzexuan/www/report-repair-fe/APP/Home/Common/function.php 第 6 行.
+NOTIC: [8] Undefined index: cateId /Users/duzexuan/www/report-repair-fe/APP/Home/Common/function.php 第 9 行.
+NOTIC: [8] Undefined index: rzm /Users/duzexuan/www/report-repair-fe/APP/Home/Common/function.php 第 12 行.
+NOTIC: [8] Undefined index: wxdjh /Users/duzexuan/www/report-repair-fe/APP/Home/Common/function.php 第 12 行.
+NOTIC: [8] Undefined index: hfmyd /Users/duzexuan/www/report-repair-fe/APP/Home/Common/function.php 第 12 行.
+NOTIC: [8] Undefined index: hfjy /Users/duzexuan/www/report-repair-fe/APP/Home/Common/function.php 第 12 行.
+NOTIC: [8] Undefined index: rzm /Users/duzexuan/www/report-repair-fe/APP/Home/Common/function.php 第 13 行.
+NOTIC: [8] Undefined index: xm /Users/duzexuan/www/report-repair-fe/APP/Home/Common/function.php 第 13 行.
+NOTIC: [8] Undefined index: ip /Users/duzexuan/www/report-repair-fe/APP/Home/Common/function.php 第 13 行.
+NOTIC: [8] Undefined index: bt /Users/duzexuan/www/report-repair-fe/APP/Home/Common/function.php 第 13 行.
+NOTIC: [8] Undefined index: fwxmh /Users/duzexuan/www/report-repair-fe/APP/Home/Common/function.php 第 13 行.
+NOTIC: [8] Undefined index: bxdh /Users/duzexuan/www/report-repair-fe/APP/Home/Common/function.php 第 13 行.
+NOTIC: [8] Undefined index: fwqyh /Users/duzexuan/www/report-repair-fe/APP/Home/Common/function.php 第 13 行.
+NOTIC: [8] Undefined index: bxdd /Users/duzexuan/www/report-repair-fe/APP/Home/Common/function.php 第 13 行.
+NOTIC: [8] Undefined index: bxnr /Users/duzexuan/www/report-repair-fe/APP/Home/Common/function.php 第 13 行.
+SQL: SHOW COLUMNS FROM `wx_globle` [ RunTime:0.0049s ]
+NOTIC: [2] Illegal string offset '#text' /Users/duzexuan/www/report-repair-fe/APP/Home/Model/GlobleModel.class.php 第 18 行.
+NOTIC: [8] Uninitialized string offset: 0 /Users/duzexuan/www/report-repair-fe/APP/Home/Model/GlobleModel.class.php 第 18 行.
+NOTIC: [2] Illegal string offset '#text' /Users/duzexuan/www/report-repair-fe/APP/Home/Model/GlobleModel.class.php 第 18 行.
+NOTIC: [8] Uninitialized string offset: 0 /Users/duzexuan/www/report-repair-fe/APP/Home/Model/GlobleModel.class.php 第 18 行.
+NOTIC: [2] Illegal string offset '#text' /Users/duzexuan/www/report-repair-fe/APP/Home/Model/GlobleModel.class.php 第 18 行.
+NOTIC: [8] Uninitialized string offset: 0 /Users/duzexuan/www/report-repair-fe/APP/Home/Model/GlobleModel.class.php 第 18 行.
+NOTIC: [2] Illegal string offset '#text' /Users/duzexuan/www/report-repair-fe/APP/Home/Model/GlobleModel.class.php 第 18 行.
+NOTIC: [8] Uninitialized string offset: 0 /Users/duzexuan/www/report-repair-fe/APP/Home/Model/GlobleModel.class.php 第 18 行.
+NOTIC: [2] Illegal string offset '#text' /Users/duzexuan/www/report-repair-fe/APP/Home/Model/GlobleModel.class.php 第 18 行.
+NOTIC: [8] Uninitialized string offset: 0 /Users/duzexuan/www/report-repair-fe/APP/Home/Model/GlobleModel.class.php 第 18 行.
+NOTIC: [2] Illegal string offset '#text' /Users/duzexuan/www/report-repair-fe/APP/Home/Model/GlobleModel.class.php 第 18 行.
+NOTIC: [8] Uninitialized string offset: 0 /Users/duzexuan/www/report-repair-fe/APP/Home/Model/GlobleModel.class.php 第 18 行.
+SQL: SHOW COLUMNS FROM `wx_globle` [ RunTime:0.0063s ]
+SQL: SELECT * FROM `wx_globle` WHERE `wx_djh` = 'a66222d0-f5ba-4fe5-86d4-a3cd01815db4'  [ RunTime:0.0007s ]
+NOTIC: [2] Illegal offset type in isset or empty /Users/duzexuan/www/report-repair-fe/ThinkPHP/Library/Think/Model.class.php 第 511 行.
+SQL: DELETE FROM `wx_globle` WHERE `wx_djh` = 'a66222d0-f5ba-4fe5-86d4-a3cd01815db4' [ RunTime:0.0015s ]
+SQL: INSERT INTO `wx_globle` (`wx_djh`,`wx_bt`,`wx_bxlxh`,`wx_bxlxm`,`wx_bxrrzm`,`wx_bxr`,`wx_bxsj`,`wx_bxdh`,`wx_fwqyh`,`wx_bxdd`,`wx_bxnr`,`wx_slr`,`wx_shr`,`wx_cxr`,`wx_ysfz`,`wx_ysqk`,`wx_hfr`,`wx_hfmyd`,`wx_hfjy`,`wx_fwqym`,`wx_wxztm`,`wx_wxgm`,`wx_cxbmm`,`xysj`,`wx_wxdh`,`wx_bxip`,`wx_sfkhf`,`stunum`) VALUES ('a66222d0-f5ba-4fe5-86d4-a3cd01815db4','停水','0102','水管','1635841                             ','刘晨凌','2014-10-23 23:41:18','10086','e51e1aae-8aa3-4546-aaab-a18d013873b0','123','<p>停水</p>','李开宇','李开宇','','0','','','','','学生公寓区','已受理','','物业管理中心','10-20分钟响应','Y2014102323-010380','202.202.43.205','否','2013214368') [ RunTime:0.0047s ]
+SQL: SELECT * FROM `wx_globle` WHERE `stunum` = 2013214368 AND `wx_wxztm` = '未受理'  [ RunTime:0.0005s ]
+SQL: SELECT * FROM `wx_globle` WHERE `stunum` = 2013214368 AND `wx_wxztm` = '已审核'  [ RunTime:0.0005s ]
+SQL: SELECT * FROM `wx_globle` WHERE `stunum` = 2013214368 AND `wx_wxztm` = '已受理'  [ RunTime:0.0005s ]
+SQL: SELECT * FROM `wx_globle` WHERE `stunum` = 2013214368 AND `wx_wxztm` = '已派出'  [ RunTime:0.0004s ]
+
+[ 2015-10-15T16:56:54+08:00 ] ::1 /report-repair-fe/index.php?m=Home&c=Index&a=LoadUnfinishedData&time=1
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000008s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000040s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000892s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000964s ]
+SQL: SHOW COLUMNS FROM `wx_globle` [ RunTime:0.0114s ]
+SQL: SHOW COLUMNS FROM `wx_globle` [ RunTime:0.0163s ]
+SQL: SELECT * FROM `wx_globle` WHERE `stunum` = 2013214368 AND `wx_wxztm` = '未受理'  [ RunTime:0.0027s ]
+SQL: SELECT * FROM `wx_globle` WHERE `stunum` = 2013214368 AND `wx_wxztm` = '已审核'  [ RunTime:0.0014s ]
+SQL: SELECT * FROM `wx_globle` WHERE `stunum` = 2013214368 AND `wx_wxztm` = '已受理'  [ RunTime:0.0006s ]
+SQL: SELECT * FROM `wx_globle` WHERE `stunum` = 2013214368 AND `wx_wxztm` = '已派出'  [ RunTime:0.0015s ]
+
