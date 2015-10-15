@@ -34,10 +34,9 @@
 		if(finishDrag === 0 && finishClick === 0) {		//第一次加载的条件，点击数为 0，拖动数为 0
 			$.ajax({
 	            type: 'GET',
-	            url: "index.php?m=Home&c=Index&a=LoadfinishedData", 
+	            url: "index.php?m=Home&c=Index&a=LoadfinishedData&time=finishDrag", 
 	            dataType: 'json',
 	            success: function(data){
-	            	console.log(data);
 	            	finishClick++;
 	            	if(data.length===0) {
 	            		$nothing.css({display: "block"});
@@ -75,10 +74,9 @@
 	var pageLoad = function() {	//首页加载
 			$.ajax({		//首页加载-未完成		
 	            type: 'GET',
-	            url: "index.php?m=Home&c=Index&a=firstLoad",
+	            url: "index.php?m=Home&c=Index&a=firstLoad&time=unfinishDrag",
 	            dataType: 'json',
 	            success: function(data){
-	            	console.log(data);
 	            	data.length===0 ? $nothing.css({display: "block"}) : $unfinishItems.css({display: "block"});
 	            	var result = '';
 	            	for(var i=0; i<data.length; i++){
@@ -107,10 +105,9 @@
 	    scrollArea : window,
 	    loadDownFn : function(me){
 	    	unfinishDrag++;
-	    	console.log(unfinishDrag);
 	        $.ajax({
 	            type: 'GET',
-	            url: "index.php?m=Home&c=Index&a=LoadUnfinishedData",
+	            url: "index.php?m=Home&c=Index&a=LoadUnfinishedData&time=unfinishDrag",
 	            dataType: 'json',
 	            success: function(data){
 	            	var result = '';
@@ -143,10 +140,9 @@
 	    scrollArea : window,
 	    loadDownFn : function(me){
 	    	finishDrag++;
-	    	console.log(finishDrag);
 	        $.ajax({
 	            type: 'GET',
-	            url: "index.php?m=Home&c=Index&a=LoadFinishedData",	
+	            url: "index.php?m=Home&c=Index&a=LoadFinishedData&time=finishDrag",	
 	            dataType: 'json',
 	            success: function(data){
 	            	var result = '';

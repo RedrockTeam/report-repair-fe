@@ -15,18 +15,20 @@
 <link rel="stylesheet" href="/repair-report/Public/styles/dropload.min.css">	
 </head>
 <body>
-	<header id="home-header">
-		<span class="home-header-name">
-			<?php echo session('usrname'); ?>
-		</span>
-		<input type="button" id="home-header-submit" class="home-header-submit" value="报修提交">
-	</header>
-	<div class="home-nav">
-		<div id="home-nav-unfinish" class="home-nav-focus">
-			未完成
-		</div>
-		<div id="home-nav-finish">
-			已完成
+	<div id="home-header-container">
+		<header id="home-header">
+			<span class="home-header-name">
+				姚蕤
+			</span>
+			<input type="button" id="home-header-submit" class="home-header-submit" value="报修提交">
+		</header>
+		<div class="home-nav">
+			<div id="home-nav-unfinish" class="home-nav-focus">
+				未完成
+			</div>
+			<div id="home-nav-finish">
+				已完成
+			</div>
 		</div>
 	</div>
 
@@ -52,9 +54,6 @@
 		<p class="home-nothing-line">
 			东西保管的很好哦
 		</p>
-	</div>
-	<div id="footer" style="width: 100%; height: 20px; background-color: #ccc; position: fixed; bottom:0">
-		
 	</div>
 </body>
 <script src="/repair-report/Public/scripts/zepto.js"></script>

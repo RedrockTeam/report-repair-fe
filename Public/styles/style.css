@@ -168,6 +168,14 @@ input {
 }
 /* 后面几页重复使用的列表样式 */
 /* home */
+#home-header-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 7.8125rem;
+  z-index: 100;
+}
 #home-header {
   width: 100%;
   height: 5.9375rem;
@@ -237,12 +245,10 @@ input {
 }
 .home-itemList {
   /* 已完成和未完成 list 共用一套样式 */
-  margin-top: 0.5625rem;
+  margin-top: 7.8125rem;
   padding-left: 0.46875rem;
   padding-right: 0.46875rem;
   background-color: #fff;
-  border-bottom: 1px solid #a9a9a9;
-  /*no*/
 }
 .home-itemList .home-itemList-single {
   box-sizing: border-box;

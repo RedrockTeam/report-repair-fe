@@ -196,6 +196,14 @@ input {
 // 	-o-text-size-adjust: none;
 // 	text-size-adjust: none;
 // }
+#home-header-container {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: unit(500/@base-unit, rem);
+	z-index: 100;
+}
 #home-header {
 	width: 100%;
 	height: unit(380/@base-unit, rem);	
@@ -260,11 +268,12 @@ input {
 	color: #157efb;
 }
 .home-itemList {			/* 已完成和未完成 list 共用一套样式 */
-	margin-top: unit(36/@base-unit, rem);
+	margin-top: unit(500/@base-unit, rem);
+	//margin-top: unit(36/@base-unit, rem);
 	padding-left: unit(30/@base-unit, rem);
 	padding-right: unit(30/@base-unit, rem);
 	background-color: #fff;
-	border-bottom: 1px solid #a9a9a9; /*no*/
+	//border-bottom: 1px solid #a9a9a9; /*no*/
 	.home-itemList-single {
 		box-sizing: border-box;
 		overflow: hidden;
