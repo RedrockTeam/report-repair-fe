@@ -26,5 +26,22 @@ class DetailController extends Controller{
 		}else{
 			flase;
 		}
-	} 
+	}
+	public function returnVisit(){
+		if(session('stuId') && I('get.wxdjh') && I('get.hfmyd') && I('get.hfjy')){
+			$conf = [
+				'rzm' => session('stuId'),
+				'wxdjh' => I('get.wxdjh'),
+				'hfmyd' => I('get.hfmyd'),
+				'hfjy' => I('get.hfjy'),
+			];
+			if(send_request('PayReturnVisit', $conf)){
+				return true;
+			}else{
+				return false;
+			}
+		}else{
+			$this->error('数据填写不完整');
+		}
+	}
 }

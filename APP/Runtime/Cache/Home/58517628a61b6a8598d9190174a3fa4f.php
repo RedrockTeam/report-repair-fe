@@ -3,8 +3,9 @@
 <head>
 	<meta charset="UTF-8">
 	<title>详情</title>
-<link rel="stylesheet" href="/report/Public/styles/normalize.min.css">	
-<link rel="stylesheet" href="/report/Public/styles/style.debug.css">	
+<link rel="stylesheet" href="/report-repair-fe/Public/styles/normalize.min.css">	
+<link rel="stylesheet" href="/report-repair-fe/Public/styles/style.debug.css">
+	
 </head>
 <body>
 	<div id="detail-report">
@@ -15,7 +16,7 @@
 					申报人<span></span>
 				</div>
 				<div class="rli-itemDetail">
-					陈定攀
+					<?php echo ($resarr['wx_bxr']); ?>
 				</div>
 			</li>
 			<li class="report-list-item">
@@ -24,7 +25,7 @@
 					电话<span></span>
 				</div>
 				<div class="rli-itemDetail">
-					13500123456
+					<?php echo ($resarr['wx_bxdh']); ?>
 				</div>
 			</li>
 			<li class="report-list-item">
@@ -33,13 +34,13 @@
 					标题<span></span>
 				</div>
 				<div class="rli-itemDetail">
-					开关坏了！
+					<?php echo ($resarr['wx_bt']); ?>
 				</div>
 				<i id="detail-title-btn" class="iconfont iconfont-star" style="float: right;transform: rotate(0deg)">&#xe62b;</i>
 			</li>
 			<li class="report-list-item" id="detail-title-detail" style="height: 0">
 				<div class="rli-itemDetail">
-					重庆邮电大学重庆邮电大学重庆邮电大学重庆邮电大学重庆邮电大学重庆邮电大学重庆邮电大学重重庆邮电大学重庆邮电大学重庆邮电大学重庆邮电大学重庆邮电大学重庆邮电大学重庆邮电大学重重庆邮电大学重庆邮电大学重庆邮电大学重庆邮电大学重庆邮电大学重庆邮电大学重庆邮电大学重
+					<?php echo ($resarr['wx_bxnr']); ?>
 				</div>
 			</li>
 			<li class="report-list-item">
@@ -48,7 +49,7 @@
 					服务项目<span></span>
 				</div>
 				<div class="rli-itemDetail">
-					电器
+					<?php echo ($resarr['wx_bxlxm']); ?>
 				</div>
 				<div class="rli-itemDetailMore">
 					<span>
@@ -62,11 +63,11 @@
 					服务区域<span></span>
 				</div>
 				<div class="rli-itemDetail">
-					教学区
+					<?php echo ($resarr['wx_fwqym']); ?>
 				</div>
 				<div class="rli-itemDetailMore">
 					<span>
-						第三教学楼
+						<?php echo ($resarr['wx_bxdd']); ?>
 					</span>
 				</div>
 			</li>
@@ -80,7 +81,7 @@
 					负责人<span></span>
 				</div>
 				<div class="rli-itemDetail">
-					隔壁老王
+					<?php echo ($resarr['wx_slr']); ?>
 				</div>
 			</li>
 			<li class="report-list-item">
@@ -89,10 +90,10 @@
 					满意度<span></span>
 				</div>
 				<div class="rli-itemDetail">
-					<i class="iconfont iconfont-star">&#xe686;</i>
-					<i class="iconfont iconfont-star">&#xe686;</i>
-					<i class="iconfont iconfont-star">&#xe686;</i>
-					<i class="iconfont iconfont-star">&#xe686;</i>
+					<i class="iconfont iconfont-mark">&#xe686;</i>
+					<i class="iconfont iconfont-mark">&#xe686;</i>
+					<i class="iconfont iconfont-mark">&#xe686;</i>
+					<i class="iconfont iconfont-mark">&#xe686;</i>
 				</div>
 			</li>
 			<li class="report-list-item">
@@ -103,12 +104,12 @@
 				<div class="rli-itemDetail">
 					
 				</div>
-				<div class="rli-itemDetailMore">
-					<p>
-						重庆邮电大学重庆邮电大学重庆邮电大学重庆邮电大学重庆邮电大学重庆邮电大学重庆邮电大学重
-					</p>
-				</div>
 			</li>
+			<div class="rli-itemDetailMore" style="margin-top: 0;font-size: 20px;">
+				<textarea class="submit-text">请在这里输入内容
+					
+				</textarea>
+			</div>
 		</ul>
 	</div>	
 	<div class="detail-btn">
@@ -129,43 +130,7 @@
 		</div>
 	</div>
 </body>
-<script src="/report/Public/scripts/zepto.js"></script>
-<script src="/report/Public/scripts/flexible.js"></script>
-<script type="text/javascript">
-(function(){
-	var $detailBtn = $("#detail-title-btn");
-	var $ditailDetail = $("#detail-title-detail");
-	var $detailStars = $(".rli-itemDetail .iconfont-star");
-	var $detailConfirm = $("#detail-confirm");
-	var $failContainer = $("#fail-container");
-	var $failConfirm = $("#fail-btn");
-
-	$detailBtn.click(function(){
-		if($detailBtn.css("transform")==="rotate(0deg)") {
-			$detailBtn.css({transform: "rotate(180deg)"});
-			$ditailDetail.css({height: "auto",paddingTop: "0.5625rem",paddingBottom: "0.5625rem"});
-		}else {
-			$detailBtn.css({transform: "rotate(0deg)"});
-			$ditailDetail.css({height: 0,paddingTop: 0,paddingBottom: 0});
-		}
-	});
-
-	for(var i=0; i<$detailStars.length; i++) {
-		(function() {
-			$detailStars[i].addEventListener('click', function(){
-				this.innerHTML = "&#xe685;";
-			}, false);
-		}());
-	}									/* 点星星有闭包问题 */
-
-	$detailConfirm.click(function(){
-		$failContainer.css({display: "block", marginTop: window.scrollY + "px", height: document.documentElement.clientHeight  + "px"});
-	});
-
-	$failConfirm.click(function(){
-		$failContainer.css({display: "none"});
-	});									/* 待做防止滑动 */
-
-}());
-</script>
+<script src="/report-repair-fe/Public/scripts/zepto.js"></script>
+<script src="/report-repair-fe/Public/scripts/flexible.js"></script>
+<script src="/report-repair-fe/Public/scripts/detail.js"></script>
 </html>
