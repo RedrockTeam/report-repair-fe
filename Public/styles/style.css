@@ -169,7 +169,7 @@ input {
 /* 后面几页重复使用的列表样式 */
 /* home */
 #home-header-container {
-  position: fixed;
+  position: absolute;
   top: 0;
   left: 0;
   width: 100%;

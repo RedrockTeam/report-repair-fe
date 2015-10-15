@@ -57,7 +57,9 @@
 									'</span></li>'
 	            	}
 	                $('.home-inner-finish .lists ul').append(result);
-	                bindClick($('.home-itemList-single'));
+	                for(var i=0; i<$('.home-inner-finish .lists ul li').length; i++) {
+	                	sayDataId($('.home-inner-finish .lists ul li')[i]);
+	                }
 	            },
 	            error: function(xhr, type){
 	                alert('Ajax error!');
@@ -91,7 +93,9 @@
 									'</span></li>'
 	            	}
 	                $('.home-inner-unfinish .lists ul').append(result);
-	                bindClick($('.home-itemList-single'));
+	                for(var i=0; i<$('.home-inner-unfinish .lists ul li').length; i++) {
+	                	sayDataId($('.home-inner-unfinish .lists ul li')[i]);
+	                }
 	            },
 	            error: function(xhr, type){
 	                alert('Ajax error!');
@@ -110,6 +114,7 @@
 	            url: "index.php?m=Home&c=Index&a=LoadUnfinishedData&time="+unfinishDrag,
 	            dataType: 'json',
 	            success: function(data){
+	            	var listLength = $('.home-inner-unfinish .lists ul li').length;
 	            	var result = '';
 	            	for(var i=0; i<data.length; i++){
 	            		result += '<li class="home-itemList-single" dataid=' +
@@ -124,7 +129,9 @@
 	            	}
 	                setTimeout(function(){
 	                	$('.home-inner-unfinish .lists ul').append(result);
-	                	bindClick($('.home-itemList-single'));
+	                	for(var i=listLength; i<$('.home-inner-unfinish .lists ul li').length; i++) {
+	                		sayDataId($('.home-inner-unfinish .lists ul li')[i]);
+	                	}
 	                    me.resetload();
 	                },500);
 	            },
@@ -145,6 +152,7 @@
 	            url: "index.php?m=Home&c=Index&a=LoadFinishedData&time="+finishDrag,	
 	            dataType: 'json',
 	            success: function(data){
+	            	var listLength = $('.home-inner-finish .lists ul li').length;
 	            	var result = '';
 	            	for(var i=0; i<data.length; i++){
 	            		result += '<li class="home-itemList-single" dataid=' +
@@ -159,7 +167,9 @@
 	            	}
 	                setTimeout(function(){
 	                	$('.home-inner-finish .lists ul').append(result);
-	                	bindClick($('.home-itemList-single'));
+	                	for(var i=listLength; i<$('.home-inner-finish .lists ul li').length; i++) {
+	                		sayDataId($('.home-inner-finish .lists ul li')[i]);
+	                	}
 	                    me.resetload();
 	                },500);
 	            },
@@ -174,12 +184,8 @@
 
 	var sayDataId = function(element) {
 		element.addEventListener("click", function() {
-			console.log(element.getAttribute("dataId"));
+			console.log(element.getAttribute("dataId"));		// 这里写跳转，对接口
+			//alert(element.getAttribute("dataId"));
 		}, false);
-	}
-	var bindClick = function(element) {
-		for(var i=0; i<element.length; i++) {
-			sayDataId(element[i]);
-		}
 	}
 }());
