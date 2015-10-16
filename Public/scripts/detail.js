@@ -9,13 +9,16 @@
 	var feedback = '';
 
 	$detailBtn.click(function(){
-		if($detailBtn.css("transform")==="rotate(0deg)") {
+		if($detailBtn.css("transform")==="rotate(0deg)" || $detailBtn.css("-webkit-transform")==="matrix(1, 0, 0, 1, 0, 0)") {
 			$detailBtn.css({transform: "rotate(180deg)"});
+			$detailBtn.css({"-webkit-transform": "matrix(-1, 0, 0, -1, 0, 0)"});
 			$ditailDetail.css({height: "auto",paddingTop: "0.5625rem",paddingBottom: "0.5625rem"});
 		}else {
 			$detailBtn.css({transform: "rotate(0deg)"});
+			$detailBtn.css({"-webkit-transform": "matrix(1, 0, 0, 1, 0, 0)"});
 			$ditailDetail.css({height: 0,paddingTop: 0,paddingBottom: 0});
 		}
+		//alert($detailBtn.css("-webkit-transform"));
 	});
 
 	for(var i=0; i<$detailStars.length; i++) {
@@ -45,7 +48,7 @@
 			data: {"hfmyd": mark, "hfjy": feedback},
 			dataType: 'json',
 			success: function() {
-
+				window.location.href = "index.php?m=Home&c=Detail&a=thanks";
 			},
 			error: function() {
 				$failContainer.css({display: "block", marginTop: window.scrollY + "px", height: document.documentElement.clientHeight  + "px"});
