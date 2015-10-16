@@ -5,6 +5,8 @@
 	var $detailConfirm = $("#detail-confirm");
 	var $failContainer = $("#fail-container");
 	var $failConfirm = $("#fail-btn");
+	var mark = 2;
+	var feedback = '';
 
 	$detailBtn.click(function(){
 		if($detailBtn.css("transform")==="rotate(0deg)") {
@@ -21,6 +23,7 @@
 		(function() {
 			$detailStars[i].addEventListener('click', function(){
 				starMark(this.index);
+				mark=this.index+1;
 			}, false);
 		}());
 	}
@@ -34,7 +37,20 @@
 	starMark(1); //默认给两颗星
 
 	$detailConfirm.click(function(){
-		$failContainer.css({display: "block", marginTop: window.scrollY + "px", height: document.documentElement.clientHeight  + "px"});
+		//$failContainer.css({display: "block", marginTop: window.scrollY + "px", height: document.documentElement.clientHeight  + "px"});
+		feedback = $("#detail-text").val();
+		$.ajax({
+			type: 'POST',
+			url: "index.php?m=Home&c=Detail&a=returnVisit",
+			data: {"hfmyd": mark, "hfjy": feedback},
+			dataType: 'json',
+			success: function() {
+
+			},
+			error: function() {
+				$failContainer.css({display: "block", marginTop: window.scrollY + "px", height: document.documentElement.clientHeight  + "px"});
+			}
+		});
 	});
 
 	$failConfirm.click(function(){

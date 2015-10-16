@@ -51,11 +51,6 @@
 				<div class="rli-itemDetail">
 					<?php echo ($resarr['wx_bxlxm']); ?>
 				</div>
-				<div class="rli-itemDetailMore">
-					<span>
-						开关
-					</span>
-				</div>
 			</li>
 			<li class="report-list-item">
 				<i class="iconfont">&#xe626;</i>
@@ -106,7 +101,7 @@
 				</div>
 			</li>
 			<div class="rli-itemDetailMore" style="margin-top: 0;font-size: 20px;">
-				<textarea class="submit-text">请在这里输入内容
+				<textarea class="submit-text" id="detail-text">请在这里输入内容
 					
 				</textarea>
 			</div>

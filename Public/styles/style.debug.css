@@ -38,8 +38,10 @@ input {
   font-style: normal;
   -webkit-font-smoothing: antialiased;
   -webkit-text-stroke-width: 0.002667rem;
-  -moz-osx-font-smoothing: grayscale;
   color: #00bdff;
+  display: inline-block;
+  overflow: hidden;
+  vertical-align: top;
 }
 
 .iconfont-star {
@@ -463,15 +465,21 @@ input {
 /* submit */
 
 [data-dpr="1"] .iconfont {
-  font-size: 20px;
+  font-size: 19px;
+  width: 20px;
+  height: 20px;
 }
 
 [data-dpr="2"] .iconfont {
-  font-size: 40px;
+  font-size: 38px;
+  width: 40px;
+  height: 40px;
 }
 
 [data-dpr="3"] .iconfont {
-  font-size: 60px;
+  font-size: 57px;
+  width: 60px;
+  height: 60px;
 }
 
 [data-dpr="1"] .placetaker {

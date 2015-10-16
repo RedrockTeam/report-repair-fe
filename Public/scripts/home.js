@@ -47,7 +47,7 @@
 	            	var result = '';
 	            	for(var i=0; i<data.length; i++){
 	            		result += '<li class="home-itemList-single" dataid=' +
-	            					data[i].wx_wxdh +
+	            					data[i].wx_djh +
 	            					'><p><span class="hi-single-type">' + 
 	            					data[i].wx_bxlxm +
 	            		 			'</span><span class="hi-single-status">' + 
@@ -83,7 +83,7 @@
 	            	var result = '';
 	            	for(var i=0; i<data.length; i++){
 	            		result += '<li class="home-itemList-single" dataid=' +
-	            					data[i].wx_wxdh +
+	            					data[i].wx_djh +
 	            					'><p><span class="hi-single-type">' + 
 	            					data[i].wx_bxlxm +
 	            		 			'</span><span class="hi-single-status">' + 
@@ -118,7 +118,7 @@
 	            	var result = '';
 	            	for(var i=0; i<data.length; i++){
 	            		result += '<li class="home-itemList-single" dataid=' +
-	            					data[i].wx_wxdh +
+	            					data[i].wx_djh +
 	            					'><p><span class="hi-single-type">' + 
 	            					data[i].wx_bxlxm +
 	            		 			'</span><span class="hi-single-status">' + 
@@ -156,7 +156,7 @@
 	            	var result = '';
 	            	for(var i=0; i<data.length; i++){
 	            		result += '<li class="home-itemList-single" dataid=' +
-	            					data[i].wx_wxdh +
+	            					data[i].wx_djh +
 	            					'><p><span class="hi-single-type">' + 
 	            					data[i].wx_bxlxm +
 	            		 			'</span><span class="hi-single-status">' + 
@@ -184,8 +184,11 @@
 
 	var sayDataId = function(element) {
 		element.addEventListener("click", function() {
-			console.log(element.getAttribute("dataId"));		// 这里写跳转，对接口
+			//console.log(element.getAttribute("dataId"));		// 这里写跳转，对接口
 			//alert(element.getAttribute("dataId"));
+			var dataId = element.getAttribute("dataid");
+			console.log(dataId)
+			window.location.href="index.php?m=Home&c=Detail&a=index&wx_djh="+dataId;
 		}, false);
 	}
 }());
