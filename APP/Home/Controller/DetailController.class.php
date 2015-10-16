@@ -2,6 +2,7 @@
 namespace Home\Controller;
 use Think\Controller;
 class DetailController extends Controller{
+	private $this->wx_djh = null;
 	public function index(){
 		if($data = $this->getInfo_by_wxdh()){
 			$this->assign('resarr', $data[0]);
@@ -12,26 +13,22 @@ class DetailController extends Controller{
 	}
 
 	public function getInfo_by_wxdh(){
-
-		// $conf = [
-		// 	'appId' => 'a66222d0-f5ba-4fe5-86d4-a3cd01815db4',
-		// 	'id' => '1635841',
-		// ];
 		$where = [
 			'wx_djh' => I('get.wx_djh'),
 		];
 		// $message = send_request('Detail', $conf);
 		if($message = M('globle')->where($where)->select()){
+			$this->wx_djh = I('get.wx_djh');
 			return $message;
 		}else{
 			flase;
 		}
 	}
 	public function returnVisit(){
-		if(session('stuId') && I('get.wxdjh') && I('get.hfmyd') && I('get.hfjy')){
+		if(session('stuId') && $this->wx_djh && I('get.hfmyd') && I('get.hfjy')){
 			$conf = [
 				'rzm' => session('stuId'),
-				'wxdjh' => I('get.wxdjh'),
+				'wxdjh' => $this->wx_djh,
 				'hfmyd' => I('get.hfmyd'),
 				'hfjy' => I('get.hfjy'),
 			];
