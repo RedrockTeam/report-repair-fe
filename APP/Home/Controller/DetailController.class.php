@@ -2,7 +2,6 @@
 namespace Home\Controller;
 use Think\Controller;
 class DetailController extends Controller{
-	private $this->wx_djh = null;
 	public function index(){
 		if($data = $this->getInfo_by_wxdh()){
 			$this->assign('resarr', $data[0]);
@@ -18,24 +17,24 @@ class DetailController extends Controller{
 		];
 		// $message = send_request('Detail', $conf);
 		if($message = M('globle')->where($where)->select()){
-			$this->wx_djh = I('get.wx_djh');
+			session('wx_djh', I('get.wx_djh'));
 			return $message;
 		}else{
 			flase;
 		}
 	}
 	public function returnVisit(){
-		if(session('stuId') && $this->wx_djh && I('get.hfmyd') && I('get.hfjy')){
+		if(session('stuId') && session('wx_djh') && I('post.hfmyd') && I('post.hfjy')){
 			$conf = [
 				'rzm' => session('stuId'),
-				'wxdjh' => $this->wx_djh,
-				'hfmyd' => I('get.hfmyd'),
-				'hfjy' => I('get.hfjy'),
+				'wxdjh' => session('get.wx_djh'),
+				'hfmyd' => I('post.hfmyd'),
+				'hfjy' => I('post.hfjy'),
 			];
 			if(send_request('PayReturnVisit', $conf)){
-				return true;
+				$this->ajaxReturn(true);
 			}else{
-				return false;
+				$this->ajaxReturn(false);
 			}
 		}else{
 			$this->error('数据填写不完整');

@@ -108,7 +108,9 @@ function dell_ServerTypes($data){
 	return $xmlRes;
 }
 function dell_PayReturnVisit($data){
-	
+	$result = null;
+	$xmlRes = $data["soap:Body"]["SavePayReturnVisitResponse"]["SavePayReturnVisitResult"];
+	return $xmlRes;
 }
 function dell_RepairApp($data){
 	$result = null; //结果数组
