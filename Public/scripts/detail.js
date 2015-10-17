@@ -12,13 +12,12 @@
 		if($detailBtn.css("transform")==="rotate(0deg)" || $detailBtn.css("-webkit-transform")==="matrix(1, 0, 0, 1, 0, 0)") {
 			$detailBtn.css({transform: "rotate(180deg)"});
 			$detailBtn.css({"-webkit-transform": "matrix(-1, 0, 0, -1, 0, 0)"});
-			$ditailDetail.css({height: "auto",paddingTop: "0.5625rem",paddingBottom: "0.5625rem"});
+			$ditailDetail.css({height: "auto",paddingTop: "0.5625rem",paddingBottom: "0.5625rem",borderBottom: "1px solid #ccc"});
 		}else {
 			$detailBtn.css({transform: "rotate(0deg)"});
 			$detailBtn.css({"-webkit-transform": "matrix(1, 0, 0, 1, 0, 0)"});
-			$ditailDetail.css({height: 0,paddingTop: 0,paddingBottom: 0});
+			$ditailDetail.css({height: 0,paddingTop: 0,paddingBottom: 0,borderBottom: "0px"});
 		}
-		//alert($detailBtn.css("-webkit-transform"));
 	});
 
 	for(var i=0; i<$detailStars.length; i++) {
@@ -52,12 +51,15 @@
 			},
 			error: function() {
 				$failContainer.css({display: "block", marginTop: window.scrollY + "px", height: document.documentElement.clientHeight  + "px"});
+				$(window).scroll(function() {
+					$failContainer.css({marginTop: window.scrollY + "px", height: document.documentElement.clientHeight  + "px"});
+				});
 			}
 		});
 	});
 
 	$failConfirm.click(function(){
 		$failContainer.css({display: "none"});
-	});									/* 待做防止滑动 */
+	});									
 
 }());

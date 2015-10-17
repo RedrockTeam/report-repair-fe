@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>提交</title>
+<link rel="stylesheet" href="__PUBLIC__/styles/normalize.min.css">	
+<link rel="stylesheet" href="__PUBLIC__/styles/style.debug.css">	
+<style type="text/css">
+	.red-font {
+		color: #ff5b5b;
+	}
+</style>
+</head>
+<body>
+	<div id="submit-report">
+		<ul class="report-list">
+			<li class="report-list-item">
+				<i class="iconfont">&#xe616;</i>
+				<div class="rli-item">
+					申报人<span></span>
+				</div>
+				<div class="rli-itemDetail">
+					陈定攀
+				</div>
+				<i class="iconfont iconfont-star" style="float: right">&#xe62b;</i>
+			</li>
+			<li class="report-list-item">
+				<i class="iconfont">&#xe611;</i>
+				<div class="rli-item">
+					电话<span></span>
+				</div>
+				<div class="rli-itemDetail" >
+					<input type="text" class="submit-input" id="submit-phone" placeholder="请输入常用手机号">
+				</div>
+			</li>
+			<li class="report-list-item">
+				<i class="iconfont">&#xe636;</i>
+				<div class="rli-item">
+					服务项目<span></span>
+				</div>
+				<div class="rli-itemDetail" id="service-item">
+					请选择分类
+				</div>
+				<i class="iconfont iconfont-star" style="float: right;" id="service-item-controller">&#xe62b;</i>
+			</li>
+			<li class="report-list-item" id="submit-service-item-container">
+				<div class="placetaker">
+				
+				</div>
+				<ul id="submit-service-item" style="display: inline-block">
+					<li>水</li>
+					<li>电</li>
+					<li>光源类</li>
+					<li>木工</li>
+					<li>电器</li>
+					<li>泥水</li>
+					<li>管道疏通</li>
+					<li>换表</li>
+					<li>多媒体设备</li>
+				</ul>
+			</li>
+			<li class="report-list-item">
+				<i class="iconfont">&#xe626;</i>
+				<div class="rli-item">
+					服务区域<span></span>
+				</div>
+				<div class="rli-itemDetail" id="service-area">
+					请选择分类
+				</div>
+				<i class="iconfont iconfont-star" style="float: right" id="service-area-controller">&#xe62b;</i>
+			</li>
+			<li class="report-list-item" id="submit-service-area-container">
+				<div class="placetaker">
+				
+				</div>
+				<ul id="submit-service-area" style="display: inline-block">
+					<li>住宅区</li>
+					<li>教学区</li>
+					<li>校园公共区</li>
+					<li>办公区</li>
+					<li>学生公寓区</li>
+				</ul>
+			</li>
+			<li class="report-list-item">
+				<div class="placetaker">
+					
+				</div>
+				<div class="rli-item">
+					<span></span>
+				</div>
+				<div class="rli-itemDetail">
+					<input type="text" class="submit-input" id="submit-place" placeholder="请输入十字以内地址">
+				</div>
+			</li>
+		</ul>
+	</div>
+	<div id="submit-response">
+		<ul class="report-list">
+			<li class="report-list-item">
+				<i class="iconfont">&#xe609;</i>
+				<div class="rli-item">
+					标题<span></span>
+				</div>
+				<div class="rli-itemDetail" >
+					<input type="text" class="submit-input" id="submit-title" placeholder="请输入十字以内">
+				</div>
+			</li>
+			<li class="report-list-item">
+				<i class="iconfont">&#xe655;</i>
+				<div class="rli-item">
+					申报内容<span></span>
+				</div>
+				<div class="rli-itemDetail" >
+
+				</div>
+			</li>
+			<div class="rli-itemDetailMore"  style="margin-top: 0">
+				<textarea class="submit-text" id="submit-text" placeholder="请在这里输入内容"></textarea>
+			</div>
+		</ul>
+	</div>	
+	<div class="detail-btn">
+		<input type="button" class="btn-confirm" id="submit-btn" value="提      交">
+	</div>
+</body>
+<script src="__PUBLIC__/scripts/zepto.js"></script>
+<script src="__PUBLIC__/scripts/flexible.js"></script>
+<script src="__PUBLIC__/scripts/submit.js"></script>
+</html>

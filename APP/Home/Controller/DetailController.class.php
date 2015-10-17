@@ -40,4 +40,10 @@ class DetailController extends Controller{
 			$this->error('数据填写不完整');
 		}
 	}
+	public function thanks(){
+		$this->display();
+	}
+	// public function error(){
+	// 	$this->display();
+	// }
 }

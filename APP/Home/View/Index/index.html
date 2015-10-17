@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>首页</title>	
+<link rel="stylesheet" href="__PUBLIC__/styles/normalize.min.css">	
+<link rel="stylesheet" href="__PUBLIC__/styles/style.debug.css">
+<link rel="stylesheet" href="__PUBLIC__/styles/dropload.min.css">	
+</head>
+<body>
+	<div id="home-header-container">
+		<header id="home-header">
+			<span class="home-header-name">
+				{$Think.session.usrname}
+			</span>
+			<a href="{:U('Submit/index')}" class="home-sub-container">
+				<input type="button" id="home-header-submit" class="home-header-submit" value="报修提交">
+			</a>
+		</header>
+		<div class="home-nav">
+			<div id="home-nav-unfinish" class="home-nav-focus">
+				未完成
+			</div>
+			<div id="home-nav-finish">
+				已完成
+			</div>
+		</div>
+	</div>
+
+	<div id="home-unfinishItems" class="home-itemList home-inner-unfinish">
+		<div class="lists">
+			<ul>
+
+			</ul>
+		</div>
+	</div>
+
+	<div id="home-finishItems" class="home-itemList home-inner-finish" style="display: none">
+		<div class="lists">
+			<ul>
+				
+			</ul>
+		</div>
+	</div>
+	<div id="home-nothing" style="display: none">
+		<div class="home-nothing-bg">
+			
+		</div>
+		<p class="home-nothing-line">
+			东西保管的很好哦
+		</p>
+	</div>
+</body>
+<script src="__PUBLIC__/scripts/zepto.js"></script>
+<script src="__PUBLIC__/scripts/flexible.js"></script>
+<script src="__PUBLIC__/scripts/dropload.min.js"></script>
+<script src="__PUBLIC__/scripts/home.js"></script>

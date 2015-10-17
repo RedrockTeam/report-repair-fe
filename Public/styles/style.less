@@ -26,6 +26,11 @@ ul, p {
 input {
 	border: none;
 	outline: none;
+	margin: 0;
+	padding: 0;
+}
+textarea {
+	resize: none;
 }
 
 @font-face {
@@ -293,7 +298,7 @@ input {
 // 	border-bottom: 1px solid #a9a9a9; /*no*/
 // }
 #home-nothing {
-	margin-top: unit(36/@base-unit, rem);
+	margin-top: unit(500/@base-unit, rem);
 	background-color: #fff;
 	.home-nothing-bg {
 		position: relative;
@@ -453,6 +458,31 @@ input {
 	outline: none;
 	border: none;
 
+}
+#submit-service-item, #submit-service-area {
+	display: inline-block;
+	width: unit(300/@base-unit, rem);
+	height: unit(150/@base-unit, rem);
+	margin-left: unit(220/@base-unit, rem);
+	overflow: scroll;
+	li {
+		height: unit(50/@base-unit, rem);
+		line-height: unit(50/@base-unit, rem);
+	}
+}
+#service-item-controller, #service-area-controller {
+	-webkit-transform: rotate(0deg);
+	        transform: rotate(0deg);
+	transition: -webkit-transform .3s;
+	transition: transform .3s;
+}
+#submit-service-item-container, #submit-service-area-container {
+	height: 0;
+	padding-top: 0;
+	padding-bottom: 0;
+	border: 0;
+	transition: padding-bottom .3s;
+	transition: padding-top .3s;
 }
 /* submit */
 

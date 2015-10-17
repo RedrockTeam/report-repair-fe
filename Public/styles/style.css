@@ -20,6 +20,11 @@ p {
 input {
   border: none;
   outline: none;
+  margin: 0;
+  padding: 0;
+}
+textarea {
+  resize: none;
 }
 @font-face {
   font-family: "iconfont";
@@ -297,7 +302,7 @@ input {
   border: none;
 }
 #home-nothing {
-  margin-top: 0.5625rem;
+  margin-top: 7.8125rem;
   background-color: #fff;
 }
 #home-nothing .home-nothing-bg {
@@ -456,5 +461,34 @@ input {
   /*px*/
   outline: none;
   border: none;
+}
+#submit-service-item,
+#submit-service-area {
+  display: inline-block;
+  width: 4.6875rem;
+  height: 2.34375rem;
+  margin-left: 3.4375rem;
+  overflow: scroll;
+}
+#submit-service-item li,
+#submit-service-area li {
+  height: 0.78125rem;
+  line-height: 0.78125rem;
+}
+#service-item-controller,
+#service-area-controller {
+  -webkit-transform: rotate(0deg);
+  transform: rotate(0deg);
+  transition: -webkit-transform 0.3s;
+  transition: transform .3s;
+}
+#submit-service-item-container,
+#submit-service-area-container {
+  height: 0;
+  padding-top: 0;
+  padding-bottom: 0;
+  border: 0;
+  transition: padding-bottom 0.3s;
+  transition: padding-top 0.3s;
 }
 /* submit */
