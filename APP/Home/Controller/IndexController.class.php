@@ -3,12 +3,16 @@ namespace Home\Controller;
 use Think\Controller;
 class IndexController extends Controller {
 	public function index(){
-	    if($this->getStumByOpenId()){
-	     	// $this->firstLoad();
-	     	//$this->LoadData();
-	    	$this->display();
+		if(!session('stuId')){
+	    	if($this->getStumByOpenId()){
+	     		// $this->firstLoad();
+	     		//$this->LoadData();
+	    		$this->display();
+	    	}else{
+	    		$this->error('您没有绑定小帮手哦');
+	    	}
 	    }else{
-	    	$this->error('您没有绑定小帮手哦');
+	    	$this->display();
 	    }
 	}
 
