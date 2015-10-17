@@ -13,9 +13,9 @@ class IndexController extends Controller {
 	}
 
 	private function getStumByOpenId(){
-		//$openid = I('get.openid');
+		$openid = I('get.openid');
 		//需要替换的地方
-		$openid = 'ouRCyjsp3eo3FJil24fV625V_6no';
+		//$openid = 'ouRCyjsp3eo3FJil24fV625V_6no';
 	    if($openid){
 	        session('openid', $openid);
 	    }else{
@@ -65,8 +65,8 @@ class IndexController extends Controller {
 
     public function firstLoad(){
 		$conf = [
-			'id' => 1635841,
-			//'id' => session('stuId'),
+			//'id' => 1635841,
+			'id' => session('stuId'),
 			//需要替换的地方
  		];
 		$res = send_request('InfoById', $conf);//获取从接口拿到的保修单数据

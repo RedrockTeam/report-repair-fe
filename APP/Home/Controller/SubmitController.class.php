@@ -62,7 +62,7 @@ class SubmitController extends Controller {
 			'rzm' => session('stuId'),
 			'xm' => session('usrname'),
 			//'ip' => '202.202.41.125',
-			'ip' => $_SERVER['HTTP_X_FORWARDED_FOR']
+			'ip' => $_SERVER['HTTP_X_FORWARDED_FOR'],
 			'bt' => '这是测试数据，请穆老师处理',
 			//'bt' => I('post.bt');
 			'fwxmh' => $xmh,

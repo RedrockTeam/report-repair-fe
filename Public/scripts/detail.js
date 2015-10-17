@@ -8,6 +8,14 @@
 	var mark = 2;
 	var feedback = '';
 
+	if($("#detail-response-people").text().toString().length === 10) {
+			$("#detail-response-satisfy").css({display: "none"});
+			$("#detail-response-detail").css({display: "none"});
+			$("#detail-response-text").css({display: "none"});
+			$("#detail-response-people").text("后台处理中，请稍等");
+			$("#detail-response-people").css({borderBottom: "0px",color: "#ccc"});
+		}
+
 	$detailBtn.click(function(){
 		if($detailBtn.css("transform")==="rotate(0deg)" || $detailBtn.css("-webkit-transform")==="matrix(1, 0, 0, 1, 0, 0)") {
 			$detailBtn.css({transform: "rotate(180deg)"});
@@ -61,5 +69,4 @@
 	$failConfirm.click(function(){
 		$failContainer.css({display: "none"});
 	});									
-
 }());
