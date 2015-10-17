@@ -92,4 +92,8 @@ class GlobleModel extends Model {
             return false;
         }
     }
+
+    public function save_new_repaire($conf){
+        M('globle')->save($conf);
+    }
 }

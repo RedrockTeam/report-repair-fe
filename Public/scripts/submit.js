@@ -1,10 +1,6 @@
 $(function() {
 	var $submitBtn = $("#submit-btn");
 
-	$submitBtn.click(function(){
-		window.location.href = "submit-suc.html";
-	});
-
 	$("#submit-phone").blur(function() {
 		var _this = $("#submit-phone");
 		var tel = _this.val();
@@ -88,4 +84,40 @@ $(function() {
 		for(var i=0; i<$("#submit-service-item li").length; i++) {
 			addClick($("#submit-service-item li")[i], $("#service-item"));
 		}
+
+		$submitBtn.click(function() {
+			var phone = $("#submit-phone").val(),
+				item = $("#service-item").text(),
+				area = $("#service-area").text(),
+				areaDetail = $("#submit-place").val(),
+				title = $("#submit-title").val(),
+				detail = $("#submit-text").val();
+
+			if(phone && item && area && areaDetail && title && detail) {
+				$.ajax({
+					type: 'POST',
+					url: "index.php?m=Home&c=Submit&a=submit",
+					data: {"bxdh": phone, "fwxmh": item, "fwquy": area, "bxdd": areaDetail, "bt": title, "bxnr": detail},
+					dataType: 'json',
+					success: function(data) {
+						window.location.href = "index.php?m=Home&c=Submit&a=submit_suc";
+
+					},
+					error: function(xhr, type) {
+						$("#fail-container").css({display: "block", marginTop: window.scrollY + "px", height: document.documentElement.clientHeight  + "px"});
+						$(window).scroll(function() {
+							$("#fail-container").css({marginTop: window.scrollY + "px", height: document.documentElement.clientHeight  + "px"});
+						});
+					}
+				});
+			}else {
+				alert("请填写完整数据");
+			}
+
+			
+		});
+
+		$("#fail-btn").click(function(){
+			$("#fail-container").css({display: "none"});
+		});	
 });

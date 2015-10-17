@@ -46,10 +46,10 @@
 			url: "index.php?m=Home&c=Detail&a=returnVisit",
 			data: {"hfmyd": mark, "hfjy": feedback},
 			dataType: 'json',
-			success: function() {
+			success: function(data) {
 				window.location.href = "index.php?m=Home&c=Detail&a=thanks";
 			},
-			error: function() {
+			error: function(xhr, type) {
 				$failContainer.css({display: "block", marginTop: window.scrollY + "px", height: document.documentElement.clientHeight  + "px"});
 				$(window).scroll(function() {
 					$failContainer.css({marginTop: window.scrollY + "px", height: document.documentElement.clientHeight  + "px"});

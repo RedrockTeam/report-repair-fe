@@ -111,7 +111,7 @@
 					<input type="text" class="submit-input" id="submit-title" placeholder="请输入十字以内">
 				</div>
 			</li>
-			<li class="report-list-item">
+			<li class="report-list-item" style="border-bottom: 0">
 				<i class="iconfont">&#xe655;</i>
 				<div class="rli-item">
 					申报内容<span></span>
@@ -127,6 +127,21 @@
 	</div>	
 	<div class="detail-btn">
 		<input type="button" class="btn-confirm" id="submit-btn" value="提      交">
+	</div>
+
+	<div id="fail-container" style="display: none">
+		<div id="fail">
+			<div class="fail-img">
+			
+			</div>
+			<p class="fail-line1">
+				提交失败
+			</p>
+			<p class="fail-line2">
+				稍后再来试试吧
+			</p>
+			<input type="button" class="fail-btn" id="fail-btn" value="确定">
+		</div>
 	</div>
 </body>
 <script src="__PUBLIC__/scripts/zepto.js"></script>
