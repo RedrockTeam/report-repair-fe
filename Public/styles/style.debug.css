@@ -480,19 +480,21 @@ textarea {
   border: none;
 }
 
-#submit-service-item,
-#submit-service-area {
-  display: inline-block;
+#selecter-item,
+#selecter-area {
+  apperance: button;
+  -moz-appearance: button;
+  /* Firefox */
+  -webkit-appearance: button;
+  /* Safari and Chrome */
+  border: none;
+  outline: none;
+  padding-left: 0;
+  background-color: #fff;
   width: 4.6875rem;
-  height: 2.34375rem;
-  margin-left: 3.4375rem;
-  overflow: scroll;
-}
-
-#submit-service-item li,
-#submit-service-area li {
-  height: 0.78125rem;
-  line-height: 0.78125rem;
+  height: 0.5rem;
+  line-height: 0.5rem;
+  z-index: 10;
 }
 
 #service-item-controller,
@@ -501,16 +503,6 @@ textarea {
   transform: rotate(0deg);
   transition: -webkit-transform 0.3s;
   transition: transform .3s;
-}
-
-#submit-service-item-container,
-#submit-service-area-container {
-  height: 0;
-  padding-top: 0;
-  padding-bottom: 0;
-  border: 0;
-  transition: padding-bottom 0.3s;
-  transition: padding-top 0.3s;
 }
 
 /* submit */

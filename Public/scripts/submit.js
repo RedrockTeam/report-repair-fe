@@ -44,51 +44,55 @@ $(function() {
 		_this.removeClass("red-font");
 	});
 
-	var $serviceItem = $("#submit-service-item"),
-		$serviceItemContainer = $("#submit-service-item-container"),
-		$serviceArea = $("#submit-service-area"),
-		$serviceAreaContainer = $("#submit-service-area-container");
-
-		$("#service-item-controller").click(function(){
-			if($("#service-item-controller").css("transform")==="rotate(0deg)" || $("#service-item-controller").css("-webkit-transform")==="matrix(1, 0, 0, 1, 0, 0)") {
-				$("#service-item-controller").css({transform: "rotate(180deg)"});
-				$("#service-item-controller").css({"-webkit-transform": "matrix(-1, 0, 0, -1, 0, 0)"});
-				$serviceItemContainer.css({height: "auto",paddingTop: "0.5625rem",paddingBottom: "0.5625rem",borderBottom: "1px solid #ccc"});
-			}else {
-				$("#service-item-controller").css({transform: "rotate(0deg)"});
-				$("#service-item-controller").css({"-webkit-transform": "matrix(1, 0, 0, 1, 0, 0)"});
-				$serviceItemContainer.css({height: 0,paddingTop: 0,paddingBottom: 0,borderBottom: "0px"});
-			}
-		});
-		$("#service-area-controller").click(function(){
-			if($("#service-area-controller").css("transform")==="rotate(0deg)" || $("#service-area-controller").css("-webkit-transform")==="matrix(1, 0, 0, 1, 0, 0)") {
-				$("#service-area-controller").css({transform: "rotate(180deg)"});
-				$("#service-area-controller").css({"-webkit-transform": "matrix(-1, 0, 0, -1, 0, 0)"});
-				$serviceAreaContainer.css({height: "auto",paddingTop: "0.5625rem",paddingBottom: "0.5625rem",borderBottom: "1px solid #ccc"});
-			}else {
-				$("#service-area-controller").css({transform: "rotate(0deg)"});
-				$("#service-area-controller").css({"-webkit-transform": "matrix(1, 0, 0, 1, 0, 0)"});
-				$serviceAreaContainer.css({height: 0,paddingTop: 0,paddingBottom: 0,borderBottom: "0px"});
-			}
-		});
-
-		var addClick = function(element, toAdd) {
-			element.addEventListener("click", function() {
-				toAdd.text(element.innerHTML);
-			});
+	$("#service-item-controller").click(function() {
+		$("#selecter-item").focus();
+	});
+	$("#selecter-item").focus(function() {
+		if($("#service-item-controller").css("transform")==="rotate(0deg)" || $("#service-item-controller").css("-webkit-transform")==="matrix(1, 0, 0, 1, 0, 0)") {
+			$("#service-item-controller").css({transform: "rotate(180deg)"});
+			$("#service-item-controller").css({"-webkit-transform": "matrix(-1, 0, 0, -1, 0, 0)"});
+		}else {
+			$("#service-item-controller").css({transform: "rotate(0deg)"});
+			$("#service-item-controller").css({"-webkit-transform": "matrix(1, 0, 0, 1, 0, 0)"});
 		}
+	});
+	$("#selecter-item").blur(function() {
+		if($("#service-item-controller").css("transform")==="rotate(180deg)" || $("#service-item-controller").css("-webkit-transform")==="matrix(-1, 0, 0, -1, 0, 0)") {
+			$("#service-item-controller").css({transform: "rotate(0deg)"});
+			$("#service-item-controller").css({"-webkit-transform": "matrix(1, 0, 0, 1, 0, 0)"});
+		}else {
+			$("#service-item-controller").css({transform: "rotate(180deg)"});
+			$("#service-item-controller").css({"-webkit-transform": "matrix(-1, 0, 0, -1, 0, 0)"});
+		}
+	});
 
-		for(var i=0; i<$("#submit-service-area li").length; i++) {
-			addClick($("#submit-service-area li")[i], $("#service-area"));
+	$("#service-area-controller").click(function() {
+		$("#selecter-area").focus();
+	});
+	$("#selecter-area").focus(function() {
+		if($("#service-area-controller").css("transform")==="rotate(0deg)" || $("#service-area-controller").css("-webkit-transform")==="matrix(1, 0, 0, 1, 0, 0)") {
+			$("#service-area-controller").css({transform: "rotate(180deg)"});
+			$("#service-area-controller").css({"-webkit-transform": "matrix(-1, 0, 0, -1, 0, 0)"});
+		}else {
+			$("#service-area-controller").css({transform: "rotate(0deg)"});
+			$("#service-area-controller").css({"-webkit-transform": "matrix(1, 0, 0, 1, 0, 0)"});
 		}
-		for(var i=0; i<$("#submit-service-item li").length; i++) {
-			addClick($("#submit-service-item li")[i], $("#service-item"));
+	});
+	$("#selecter-area").blur(function() {
+		if($("#service-area-controller").css("transform")==="rotate(180deg)" || $("#service-area-controller").css("-webkit-transform")==="matrix(-1, 0, 0, -1, 0, 0)") {
+			$("#service-area-controller").css({transform: "rotate(0deg)"});
+			$("#service-area-controller").css({"-webkit-transform": "matrix(1, 0, 0, 1, 0, 0)"});
+		}else {
+			$("#service-area-controller").css({transform: "rotate(180deg)"});
+			$("#service-area-controller").css({"-webkit-transform": "matrix(-1, 0, 0, -1, 0, 0)"});
 		}
+	});
+
 
 		$submitBtn.click(function() {
 			var phone = $("#submit-phone").val(),
-				item = $("#service-item").text(),
-				area = $("#service-area").text(),
+				item = $("#selecter-area").val(),
+				area = $("#selecter-area").val(),
 				areaDetail = $("#submit-place").val(),
 				title = $("#submit-title").val(),
 				detail = $("#submit-text").val();
