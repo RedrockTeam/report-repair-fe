@@ -75,7 +75,7 @@ textarea {
 	padding-right: unit(20/@base-unit, rem);
 	background-color: #fff;
 	color: #5b5b5b;
-	border-bottom: 1px solid #a9a9a9; /*no*/
+	//border-bottom: 1px solid #a9a9a9; /*no*/
 	.report-list-item {
 		position: relative;
 		box-sizing: border-box;
@@ -84,7 +84,7 @@ textarea {
 		margin-left: unit(10/@base-unit, rem);
 		padding-top: unit(36/@base-unit, rem);
 		padding-bottom: unit(30/@base-unit, rem);
-		border-bottom: 1px solid #a9a9a9; /*no*/
+		border-bottom: 1px solid #f0f0f0; /*no*/
 	}
 	.rli-item {
 		display: inline-block;
@@ -187,6 +187,9 @@ textarea {
 	width: unit(310/@base-unit, rem);
 	margin: 0 auto;
 }
+
+
+
 #home-header-container {
 	position: absolute;
 	top: 0;
@@ -203,17 +206,25 @@ textarea {
 	text-align: center;
 	color: #fff;									// home 的背景
 	.home-header-name {
+		white-space:nowrap;
+		overflow: hidden;
+		width: unit(640/@base-unit, rem);	
 		display: inline-block;
 		margin: 0 auto;
 		margin-top: unit(70/@base-unit, rem);
-		font-size: 84px; /*px*/
-		line-height: 84px; /*px*/
+		font-size: 100px; /*px*/
+		//height: 86px; /*px*/
+		//line-height: 86px; /*px*/
+		height: unit(112/@base-unit, rem);
+		line-height: unit(112/@base-unit, rem);
+		text-overflow: ellipsis;
+		vertical-align: top;
 	}												// home 的人名
 	.home-header-submit {
 		position: relative;
 		display: block;
 		left: 50%;
-		margin-top: unit(60/@base-unit, rem);
+		margin-top: unit(35/@base-unit, rem);
 		margin-left: unit(-155/@base-unit, rem);
 		width: unit(310/@base-unit, rem);
 		height: unit(80/@base-unit, rem);
@@ -245,17 +256,20 @@ textarea {
 	color: #a9a9a9;
 }
 #home-nav-unfinish {
+	box-sizing: border-box;
 	float: left;
 	width: 50%;
-	border-bottom: 1px solid #ccc; /*no*/
+	border-bottom: 2px solid #fff; /*no*/
 }
 #home-nav-finish {
+	box-sizing: border-box;
 	display: inline-block;
-	border-bottom: 1px solid #ccc; /*no*/
+	border-bottom: 2px solid #fff; /*no*/
 	width: 50%;
 }
 .home-nav-focus {
-	border-bottom: 1px solid #157efb!important; /*no*/
+	box-sizing: border-box;
+	border-bottom: 2px solid #157efb!important; /*no*/
 	color: #157efb;
 }
 .home-itemList {			/* 已完成和未完成 list 共用一套样式 */
@@ -273,7 +287,7 @@ textarea {
 		padding-bottom: unit(30/@base-unit, rem);
 		padding-left: unit(20/@base-unit, rem);
 		line-height: 32px; /*px*/
-		border-bottom: 1px solid #a9a9a9; /*no*/
+		border-bottom: 1px solid #f0f0f0; /*no*/
 		font-size: 32px; /*px*/
 		.hi-single-type {
 			color: #404040;
@@ -360,6 +374,11 @@ textarea {
 	div {
 		margin-left: unit(65/@base-unit, rem);
 	}
+}
+#detail-report, #detail-response, #submit-report, #submit-response, .home-nav, .home-nothing {
+	-moz-box-shadow: 0px unit(3/@base-unit, rem) unit(6/@base-unit, rem) #e5e5e5;
+	-webkit-box-shadow: 0px unit(3/@base-unit, rem) unit(6/@base-unit, rem) #e5e5e5;
+	box-shadow: 0px unit(3/@base-unit, rem) unit(6/@base-unit, rem) #e5e5e5;
 }
 /* detail */
 

@@ -73,7 +73,6 @@ textarea {
   padding-right: 0.3125rem;
   background-color: #fff;
   color: #5b5b5b;
-  border-bottom: 1px solid #a9a9a9;
 }
 
 .report-list .report-list-item {
@@ -84,7 +83,7 @@ textarea {
   margin-left: 0.15625rem;
   padding-top: 0.5625rem;
   padding-bottom: 0.46875rem;
-  border-bottom: 1px solid #a9a9a9;
+  border-bottom: 1px solid #f0f0f0;
 }
 
 .report-list .rli-item {
@@ -207,16 +206,23 @@ textarea {
 }
 
 #home-header .home-header-name {
+  white-space: nowrap;
+  overflow: hidden;
+  width: 10rem;
   display: inline-block;
   margin: 0 auto;
   margin-top: 1.09375rem;
+  height: 1.75rem;
+  line-height: 1.75rem;
+  text-overflow: ellipsis;
+  vertical-align: top;
 }
 
 #home-header .home-header-submit {
   position: relative;
   display: block;
   left: 50%;
-  margin-top: 0.9375rem;
+  margin-top: 0.546875rem;
   margin-left: -2.421875rem;
   width: 4.84375rem;
   height: 1.25rem;
@@ -245,19 +251,22 @@ textarea {
 }
 
 #home-nav-unfinish {
+  box-sizing: border-box;
   float: left;
   width: 50%;
-  border-bottom: 1px solid #ccc;
+  border-bottom: 2px solid #fff;
 }
 
 #home-nav-finish {
+  box-sizing: border-box;
   display: inline-block;
-  border-bottom: 1px solid #ccc;
+  border-bottom: 2px solid #fff;
   width: 50%;
 }
 
 .home-nav-focus {
-  border-bottom: 1px solid #157efb!important;
+  box-sizing: border-box;
+  border-bottom: 2px solid #157efb!important;
   color: #157efb;
 }
 
@@ -276,7 +285,7 @@ textarea {
   padding-right: 0.3125rem;
   padding-bottom: 0.46875rem;
   padding-left: 0.3125rem;
-  border-bottom: 1px solid #a9a9a9;
+  border-bottom: 1px solid #f0f0f0;
 }
 
 .home-itemList .home-itemList-single .hi-single-type {
@@ -369,6 +378,17 @@ textarea {
 
 #detail-title-detail div {
   margin-left: 1.015625rem;
+}
+
+#detail-report,
+#detail-response,
+#submit-report,
+#submit-response,
+.home-nav,
+.home-nothing {
+  -moz-box-shadow: 0 0.046875rem 0.09375rem #e5e5e5;
+  -webkit-box-shadow: 0 0.046875rem 0.09375rem #e5e5e5;
+  box-shadow: 0 0.046875rem 0.09375rem #e5e5e5;
 }
 
 /* detail */
@@ -640,18 +660,15 @@ textarea {
 }
 
 [data-dpr="1"] #home-header .home-header-name {
-  font-size: 42px;
-  line-height: 42px;
+  font-size: 50px;
 }
 
 [data-dpr="2"] #home-header .home-header-name {
-  font-size: 84px;
-  line-height: 84px;
+  font-size: 100px;
 }
 
 [data-dpr="3"] #home-header .home-header-name {
-  font-size: 126px;
-  line-height: 126px;
+  font-size: 150px;
 }
 
 [data-dpr="1"] #home-header .home-header-submit {

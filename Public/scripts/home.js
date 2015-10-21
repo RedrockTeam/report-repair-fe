@@ -62,7 +62,7 @@
 	                }
 	            },
 	            error: function(xhr, type){
-	                alert('Ajax error!');
+	                alert('呀，出了点问题');
 	            }
 	        });
 		}
@@ -98,7 +98,7 @@
 	                }
 	            },
 	            error: function(xhr, type){
-	                alert('Ajax error!');
+	                alert('呀，出了点问题');
 	            }
 	        });		
 		}
@@ -136,7 +136,7 @@
 	                },500);
 	            },
 	            error: function(xhr, type){
-	                alert('Ajax error!');
+	                alert('呀，出了点问题');
 	                me.resetload();
 	            }
 	        });
@@ -174,7 +174,7 @@
 	                },500);
 	            },
 	            error: function(xhr, type){
-	                alert('Ajax error!');
+	                alert('呀，出了点问题');
 	                me.resetload();
 	            }
 	        });
@@ -188,7 +188,7 @@
 			//alert(element.getAttribute("dataId"));
 			var dataId = element.getAttribute("dataid");
 			console.log(dataId)
-			window.location.href="index.php?m=Home&c=Detail&a=index&wx_djh="+dataId;
+			window.location.href = "index.php?m=Home&c=Detail&a=index&wx_djh=" + dataId;
 		}, false);
 	}
 }());

@@ -67,8 +67,6 @@ textarea {
   padding-right: 0.3125rem;
   background-color: #fff;
   color: #5b5b5b;
-  border-bottom: 1px solid #a9a9a9;
-  /*no*/
 }
 .report-list .report-list-item {
   position: relative;
@@ -78,7 +76,7 @@ textarea {
   margin-left: 0.15625rem;
   padding-top: 0.5625rem;
   padding-bottom: 0.46875rem;
-  border-bottom: 1px solid #a9a9a9;
+  border-bottom: 1px solid #f0f0f0;
   /*no*/
 }
 .report-list .rli-item {
@@ -204,19 +202,24 @@ textarea {
   color: #fff;
 }
 #home-header .home-header-name {
+  white-space: nowrap;
+  overflow: hidden;
+  width: 10rem;
   display: inline-block;
   margin: 0 auto;
   margin-top: 1.09375rem;
-  font-size: 84px;
+  font-size: 100px;
   /*px*/
-  line-height: 84px;
-  /*px*/
+  height: 1.75rem;
+  line-height: 1.75rem;
+  text-overflow: ellipsis;
+  vertical-align: top;
 }
 #home-header .home-header-submit {
   position: relative;
   display: block;
   left: 50%;
-  margin-top: 0.9375rem;
+  margin-top: 0.546875rem;
   margin-left: -2.421875rem;
   width: 4.84375rem;
   height: 1.25rem;
@@ -246,19 +249,22 @@ textarea {
   color: #a9a9a9;
 }
 #home-nav-unfinish {
+  box-sizing: border-box;
   float: left;
   width: 50%;
-  border-bottom: 1px solid #ccc;
+  border-bottom: 2px solid #fff;
   /*no*/
 }
 #home-nav-finish {
+  box-sizing: border-box;
   display: inline-block;
-  border-bottom: 1px solid #ccc;
+  border-bottom: 2px solid #fff;
   /*no*/
   width: 50%;
 }
 .home-nav-focus {
-  border-bottom: 1px solid #157efb!important;
+  box-sizing: border-box;
+  border-bottom: 2px solid #157efb!important;
   /*no*/
   color: #157efb;
 }
@@ -278,7 +284,7 @@ textarea {
   padding-left: 0.3125rem;
   line-height: 32px;
   /*px*/
-  border-bottom: 1px solid #a9a9a9;
+  border-bottom: 1px solid #f0f0f0;
   /*no*/
   font-size: 32px;
   /*px*/
@@ -364,6 +370,16 @@ textarea {
 }
 #detail-title-detail div {
   margin-left: 1.015625rem;
+}
+#detail-report,
+#detail-response,
+#submit-report,
+#submit-response,
+.home-nav,
+.home-nothing {
+  -moz-box-shadow: 0px 0.046875rem 0.09375rem #e5e5e5;
+  -webkit-box-shadow: 0px 0.046875rem 0.09375rem #e5e5e5;
+  box-shadow: 0px 0.046875rem 0.09375rem #e5e5e5;
 }
 /* detail */
 /* thanks */
